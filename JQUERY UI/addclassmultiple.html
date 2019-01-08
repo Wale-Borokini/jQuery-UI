@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI addClass Example</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <!-- CSS -->
+      <style>
+         .red { color: red; }
+         .big { font-size: 5em; }
+         .spaced { padding: 1em; }
+      </style>
+      
+      <script>
+         $(document).ready(function() {
+            $('.button-1').click(function() {
+               $( "#welcome" ).addClass( "red big spaced", 3000 );
+            });
+         });
+      </script>
+   </head>
+   
+   <body>
+      <p id = "welcome">Welcome to Tutorials Point!</p>
+      <button class = "button-1">Click me</button>
+   </body>
+</html>

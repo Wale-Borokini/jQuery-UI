@@ -1,0 +1,4178 @@
+JQUERY UI INTRODUCTION
+
+JqueryUI is the most popular front end frameworks currently. It is sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development. It uses HTML, CSS and Javascript. This tutorial will teach you basics of JqueryUI Framework, which you can use to create complex web applications GUI with ease. This Tutorial is divided into sections such as JqueryUI Basic Structure, JqueryUI CSS, JqueryUI Layout Components and JqueryUI Plugins. Each of these sections contain related topics with simple and useful examples.
+
+Audience
+This tutorial has been prepared for anyone who has a basic knowledge of HTML and CSS and has an urge to develop websites. After completing this tutorial you will find yourself at a moderate level of expertise in developing web projects using Twitter JqueryUI.
+
+Prerequisites
+Before you start proceeding with this tutorial, I'm making an assumption that you are already aware about basics of HTML and CSS. If you are not well aware of these concepts then I will suggest to go through our short tutorial on HTML Tutorial and CSS Tutorial
+
+
+//////JQUERY UI OVERVIEW
+
+
+JqueryUI is a powerful Javascript library built on top of jQuery JavaScript library. UI stands for User interface, It is a set of plug-ins for jQuery that adds new functionalities to the jQuery core library.
+
+The set of plug-ins in JqueryUI includes interface interactions, effects, animations, widgets, and themes built on top of jQuery JavaScript Library.
+
+It was released in September 2007, announced in a blog post by John Resig on jquery.com. The latest release, 1.10.4, requires jQuery 1.6 or later version. jQuery UI is a free, open source software, licensed under the MIT License.
+
+Features
+JqueryUI is categorized into four groups
+ Interactions 
+ Widgets 
+ Effects 
+ Utilities 
+
+ These will be discussed in detail in the subsequent chapters. The structure of the library is as shown in the image below −
+
+Jquery UI Category
+Interactions − These are the interactive plugins like drag, drop, resize and more which give the user the ability to interact with DOM elements.
+
+Widgets − Using widgets which are jQuery plugins, you can create user interface elements like accordian,datepicker etc.
+
+Effects − These are built on the internal jQuery effects. They contain a full suite of custom animations and transitions for DOM elements.
+
+Utilities − These are a set of modular tools the JqueryUI library uses internally.
+
+Benefits of JqueryUI
+The below are some of the benefits of Jquery UI −
+
+Cohesive and Consistent APIs.
+Comprehensive Browser Support.
+Open Source and Free to Use.
+Good Documentation.
+Powerful Theming Mechanism.
+Stable and Maintenance Friendly.
+
+
+
+This chapter will discuss about download and set up of JqueryUI library. We will also briefly study the directory structure and its contents. JqueryUI library can be used in two ways in your web page −
+
+Downloading UI Library from its official website
+
+Downloading UI Library from CDNs
+
+Download UI Library from Its Official Website
+When you open the link http://jqueryui.com/, you will see there are three options to download JqueryUI library −
+
+JqueryUI Download Page
+Custom Download − Click on this button to download a customized version of library.
+
+Stable − Click on this button to get the stable and latest version of JqueryUI library.
+
+Legacy − Click on this button to get the previous major release of the JqueryUI library.
+
+Custom Download with Download Builder
+Using Download Builder, you can create a custom build to include only those portions of the library that you need. You can download this new customized version of JqueryUI, depending on the chosen theme. You will see the following screen (same page is split into two images) −
+
+JqueryUI Custom Download Page
+This is useful when you require only specific plugins or features of the JqueryUI library. The directory structure of this version is shown in the following figure −
+
+JqueryUI Custom Directory Structure Page
+Uncompressed files are located in the development-bundle directory. The uncompressed file is best used during development or debugging; the compressed file saves bandwidth and improves performance in production.
+
+Stable download
+Click on the Stable button, which leads directly to a ZIP file containing the sources, examples, and documentation for latest version of JqueryUI library. Extract the ZIP file contents to a jqueryui directory.
+
+This version contains all files including all dependencies, a large collection of demos, and even the library’s unit test suite. This version is helpful to getting started.
+
+Legacy download
+Click on the Legacy button, which leads directly to a ZIP file of previous major release of JqueryUI library. This version also contains all files including all dependencies, a large collection of demos, and even the library’s unit test suite. This version is helpful to get you started.
+
+Download UI Library from CDNs
+A CDN or Content Delivery Network is a network of servers designed to serve files to users. If you use a CDN link in your web page, it moves the responsibility of hosting files from your own servers to a series of external ones. This also offers an advantage that if the visitor to your webpage has already downloaded a copy of JqueryUI from the same CDN, it won't have to be re-downloaded.
+
+The jQuery Foundation, Google, and Microsoft all provide CDNs that host jQuery core as well as jQuery UI.
+
+Because a CDN does not require you to host your own version of jQuery and jQuery UI, it is perfect for demos and experimentation.
+
+We are using the CDN versions of the library throughout this tutorial.
+Example
+Now let us write a simple example using JqueryUI. Let us create an HTML file, copy the following content to the <head> tag −
+
+<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+   rel = "stylesheet">
+<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+Details of the above code are −
+
+The first line, adds jQuery UI theme (in our case ui-lightness) via CSS. This CSS will make our UI stylish.
+
+Second line, adds the jQuery library, as jQuery UI is built on top of jQuery library.
+
+Third line, adds the jQuery UI library. This enables jQuery UI in your page.
+
+Now let's add some content to <head> tag −
+
+<script type = "text/javascript">
+   $(function () {
+      $('#dialogMsg').dialog();
+   });
+</script>
+In the <body> add this −
+
+<body>
+   <form id = "form1" runat = "server">
+      <div id = "dialogMsg" title = "First JqueryUI Example">
+         Hello this is my first JqueryUI example.
+      </div>
+   </form>
+</body>
+
+
+The complete HTML code is as follows. Save it as myfirstexample.html
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <script type = "text/javascript">
+         $(function () {
+            $('#dialogMsg').dialog();
+         });
+      </script>
+   </head>
+   
+   <body>
+      <form id = "form1" runat = "server">
+         <div id = "dialogMsg" title = "First JqueryUI Example">
+            Hello this is my first JqueryUI example.
+         </div>
+      </form>
+   </body>
+</html>
+
+Open the above page in your browser. 
+
+
+
+
+
+/////////JQUERY UI LIBRARY.
+The jQuery UI library provides a prebuilt set of functionality that gives your pages a polished professional look and feel.
+
+It is divided into 3 categories:
+1. Interactions
+2. Widget
+3. Effect
+
+
+INTERACTIONS:
+The interaction category is a set of behavior that you can reuse in your web pages & these interactions provide basic ways of letting users interact with things on the page. It has 5 interactions:
+Draggable, Droppable, Resizable, Selectable, Sortable. You can reuse these interactions in your pages. And the jQuery UI library uses them itself in its own widget.
+
+
+WIDGETS:
+ They rely on the "interactions" in the interactions category. These Widgets are themable. We can scheme these widgets using a theme roller that is provided on the jQuery UI website. 
+
+
+
+EFFECTS
+The jQuery UI effects category takes the basic effects provided by the jQuery library to the next level. they add a bunch of effects  that are not present in jQuery and they extend some of the basic ones as well. E.G  They have some of the effects that deals with adding and removing CSS classes & they extend the existing hide, show & toggle effects that the jQery library provides and they add ways of doing color animations which is not present in the basic jQuery libra
+
+
+
+
+///////////////////JQUERY UI INTERACTIONS
+INTERACTIONS:
+The interaction category is a set of behavior that you can reuse in your web pages & these interactions provide basic ways of letting users interact with things on the page. It has 5 interactions:
+Draggable, Droppable, Resizable, Selectable, Sortable. You can reuse these interactions in your pages. And the jQuery UI library uses them itself in its own widget.
+
+
+JQUERY UI DRAGGABLE
+
+jQueryUI provides draggable() method to make any DOM element draggable. Once the element is draggable, you can move that element by clicking on it with the mouse and dragging it anywhere within the viewport.
+
+Syntax
+The draggable() method can be used in two forms −
+
+$(selector, context).draggable (options) Method
+
+$(selector, context).draggable ("action", [params]) Method
+
+$ (selector, context).draggable (options) Method
+The draggable (options) method declares that an HTML element can be moved in the HTML page. The options parameter is an object that specifies the behavior of the elements involved.
+
+Syntax
+$(selector, context).draggable(options);
+You can provide one or more options at a time using Javascript object. If there are more than one options to be provided then you will separate them using a comma as follows −
+
+$(selector, context).draggable({option1: value1, option2: value2..... });
+The following table lists the different options that can be used with this method −
+
+Sr.No.	Option & Description
+1	addClasses
+If this option is set to false, it will prevent the ui-draggable class from being added in the list of selected DOM elements. By default its value is true.
+
+2	appendTo
+Specifies the element in which the draggable helper should be appended to while dragging. By default its value is "parent".
+
+3	axis
+This option constrains dragging to either the horizontal (x) or vertical (y) axis. Possible values: "x", "y".
+
+4	cancel
+You can use this option to prevent dragging from starting on specified elements. By default its value is "input,textarea, button,select,option".
+
+5	connectToSortable
+You can use this option to specify a list whose elements are interchangeable. At the end of placement, the element is part of the list. By default its value is "false".
+
+6	containment
+Constrains dragging to within the bounds of the specified element or region. By default its value is "false".
+
+7	cursor
+Specifies the cursor CSS property when the element moves. It represents the shape of the mouse pointer. By default its value is "auto".
+
+8	cursorAt
+Sets the offset of the dragging helper relative to the mouse cursor. Coordinates can be given as a hash using a combination of one or two keys: { top, left, right, bottom }. By default its value is "false".
+
+9	delay
+Delay, in milliseconds, after which the first movement of the mouse is taken into account. The displacement may begin after that time. By default its value is "0".
+
+10	disabled
+When set to true, disables the ability to move items. Items cannot be moved until this function is enabled (using the draggable ("enable") instruction). By default its value is "false".
+
+11	distance
+Number of pixels that the mouse must be moved before the displacement is taken into account. By default its value is "1".
+
+12	grid
+Snaps the dragging helper to a grid, every x and y pixels. The array must be of the form [ x, y ]. By default its value is "false".
+
+13	handle
+If specified, restricts dragging from starting unless the mousedown occurs on the specified element(s). By default its value is "false".
+
+14	helper
+Allows for a helper element to be used for dragging display. By default its value is "original".
+
+15	iframeFix
+Prevent iframes from capturing the mousemove events during a drag. By default its value is "false".
+
+16	opacity
+Opacity of the element moved when moving. By default its value is "false".
+
+17	refreshPositions
+If set to true, all droppable positions are calculated on every mousemove. By default its value is "false".
+
+18	revert
+Indicates whether the element is moved back to its original position at the end of the move. By default its value is "false".
+
+19	revertDuration
+Duration of displacement (in milliseconds) after which the element returns to its original position (see options.revert). By default its value is "500".
+
+20	scope
+Used to group sets of draggable and droppable items, in addition to droppable's accept option. By default its value is "default".
+
+21	scroll
+When set to true (the default), the display will scroll if the item is moved outside the viewable area of the window. By default its value is "true".
+
+22	scrollSensitivity
+Indicates how many pixels the mouse must exit the window to cause scrolling of the display. By default its value is "20".
+
+23	scrollSpeed
+Indicates the scrolling speed of the display once scrolling begins. By default its value is "20".
+
+24	snap
+Adjusts the display of the item being moved on other elements (which are flown). By default its value is "false".
+
+25	snapMode
+Specifies how the adjustment should be made between the moved element and those indicated in options.snap. By default its value is "both".
+
+26	snapTolerance
+Maximum number of pixels in the difference in position necessary to establish the adjustment. By default its value is "20".
+
+27	stack
+Controls the z-index of the set of elements that match the selector, always brings the currently dragged item to the front. Very useful in things like window managers. By default its value is "false".
+
+28	zIndex
+Z-index for the helper while being dragged. By default its value is "false".
+
+The following section will show you a few working examples of drag functionality.
+
+Default functionality
+The following example demonstrates a simple example of draggable functionality passing no parameters to the draggable() method.
+We will use (draggabledefault.html)
+
+
+Use of Disable, Distance, and Delay
+The following example shows the usage of three important options (a) disabled (b) delay and (c) distance in the drag function of JqueryUI.
+We will use (draggabledisdel.html)
+
+
+Constrain Movement
+The following example shows how to limit the movement of elements on the screen using containment option in the drag function of JqueryUI.
+We will use (draggablecontainment.html)
+
+Here, <span> elements are prevented from going outside a <div> whose ID is div4. You can also impose constraints on vertical or horizontal motion using options axis worth "x" or "y", which is also demonstrated.
+
+
+Move content by duplicating
+The following example demonstrates how to move an item that is the clone of the selected element. This is done using the option helper with value clone.
+We will use (draggableduplicate.html)
+
+As you can see when the first element is being dragged, only the cloned element moves, while the original item stays put. If you release the mouse, the cloned element disappears and the original item is still in its original position.
+
+
+Get Current Option Value
+The following example demonstrates how you can get a value of any option at any time during your script execution. Here we will read the value of cursor and cursorAt options set at the time of execution. Similar way you can get value of any other options available.
+We will use (draggablegetcurptval.html)
+
+
+$ (selector, context).draggable ("action", [params]) Method
+The draggable (action, params) method can perform an action on the movable elements, such as to prevent displacement. The action is specified as a string in the first argument and optionally, one or more params can be provided based on the given action.
+
+Basically, Here actions are nothing but they are jQuery methods which we can use in the form of string.
+Syntax
+$(selector, context).draggable ("action", [params]);
+The following table lists the actions for this method −
+
+Sr.No.	Action & Description
+1	destroy()
+Remove drag functionality completely. The elements are no longer movable. This will return the element back to its pre-init state.
+
+2	disable()
+Disable drag functionality. Elements cannot be moved until the next call to the draggable("enable") method.
+
+3	enable()
+Reactivates drag management. The elements can be moved again.
+
+4	option(optionName)
+Gets the value currently associated with the specified optionName. Where optionName is name of the option to get and is of type String.
+
+5	option()
+Gets an object containing key/value pairs representing the current draggable options hash.
+
+6	option(optionName, value)
+Sets the value of the draggable option associated with the specified optionName. Where optionName is the name of the option to set and value is the value to set for the option.
+
+7	option(options)
+Sets one or more options for the draggable. Where options is a map of option-value pairs to set.
+
+8	widget()
+Returns a jQuery object containing the draggable element.
+
+Example
+Now let us see an example using the actions from the above table. The following example demonstrates the use of actions disable and enable.
+We will use (draggableactdisen.html)
+
+As you can see first element is disabled and the second element's dragging is enabled which you can try to drag.
+
+
+Event Management on the Moved elements
+In addition to the draggable (options) method which we saw in the previous sections, JqueryUI provides event methods which gets triggered for a particular event. These event methods are listed below −
+
+Sr.No.	Event Method & Description
+1	create(event, ui)
+Triggered when the draggable is created. Where event is of type Event, and ui is of type Object.
+
+2	drag(event, ui)
+Triggered while the mouse is moved during the dragging. Where event is of type Event, and ui is of type Object like helper, position, offset.
+
+3	start(event, ui)
+Triggered when dragging starts. Where event is of type Event, and ui is of type Object like helper, position, offset.
+
+4	stop(event, ui)
+Triggered when dragging stops. Where event is of type Event, and ui is of type Object like helper, position, offset.
+
+The following example demonstrates the use of event method during drag functionality. This example demonstrates use of drag event.
+We will use (draggabledragevent.html)
+
+Now try to drag the written content and you will see that start of a drag event gets fired which results in showing a dialogue box and cursor will change to move icon and text will move in X-axis only.
+
+
+
+
+JQUERY UI DROPPABLE
+
+
+jQueryUI provides droppable() method to make any DOM element droppable at a specified target (a target for draggable elements).
+
+Syntax
+The droppable() method can be used in two forms −
+
+$(selector, context).droppable (options) Method
+
+$(selector, context).droppable ("action", params) Method
+
+$ (selector, context).droppable (options) Method
+The droppable (options) method declares that an HTML element can be used as an element in which you can drop other elements. The options parameter is an object that specifies the behavior of the elements involved.
+
+Syntax
+$(selector, context).droppable (options);
+You can provide one or more options at a time using Javascript object. If there are more than one options to be provided then you will separate them using a comma as follows −
+
+$(selector, context).droppable({option1: value1, option2: value2..... });
+The following table lists the different options that can be used with this method −
+
+Sr.No.	Option & Description
+1	accept
+This option is used when you need to control which draggable elements are to be accepted for dropping. By default its value is *.
+2	activeClass
+This option is a String representing one or more CSS classes to be added to the droppable element when an accepted element (one of those indicated in options.accept) is being dragged. By default its value is false.
+
+3	addClasses
+This option when set to false will prevent the ui-droppable class from being added to the droppable elements. By default its value is true.
+
+4	disabled
+This option when set to true disables the droppable. By default its value is false.
+
+5	greedy
+This option is used when you need to control which draggable elements are to be accepted for dropping on nested droppables. By default its value is false. If this option is set to true, any parent droppables will not receive the element.
+
+6	hoverClass
+This option is String representing one or more CSS classes to be added to the element of droppable when an accepted element (an element indicated in options.accept) moves into it. By default its value is false.
+
+7	scope
+This option is used to restrict the droppable action of draggable elements only to items that have the same options.scope (defined in draggable (options)). By default its value is "default".
+
+8	tolerance
+This option is a String that specifies which mode to use for testing whether a draggable is hovering over a droppable. By default its value is "intersect".
+
+The following section will show you a few working examples of drop functionality.
+
+Default Functionality
+The following example demonstrates a simple example of droppable functionality, passing no parameters to the droppable() method.
+We will use (droppabledefault.html)
+
+
+Use of addClass, disabled and tolerance
+The following example demonstrates the usage of three options (a) addClass (b) disabled and (c) tolerance in the drop function of JqueryUI.
+We will use (droppableaddclassdis.html)
+
+Now drop the element on the "Tolerance Touch!" box (just touch the edge of this box) and see the changes of target element. Now to drop the element on "Tolerance Fit!" target, the draggable element has to fully overlap the target element i.e "Tolerance Fit!" target.
+
+
+Choose elements to be dropped
+The following example demonstrates the use of option accept and scope option in the drag function of JqueryUI.
+We will use (droppablechooseelements.html)
+
+Here you can see that you can drop element "People from Japan" on only "Japan" target and element "People from India" on target India. Similary the scope for "People who want to learn Java" is set to target "Java" and "People who want to learn Spring" is set to "Spring target".
+
+
+Managing appearance
+The following example demonstrates the use of options activeClass and hoverClass of JqueryUI class, which help us manage appearance.
+We will use (droppableactivehover.html)
+
+You can notice that on dragging or hovering (over the target) of "Drag me to my target" element, changes the color of target element "Drop here"
+
+
+$ (selector, context).droppable ("action", params) Method
+The droppable ("action", params) method can perform an action on droppable elements, such as preventing droppable functionality. The action is specified as a string in the first argument (e.g., "disable" to prevent the drop). Check out the actions that can be passed, in the following table.
+
+Syntax
+$(selector, context).droppable ("action", params);;
+The following table lists the different actions that can be used with this method −
+
+Sr.No.	Action & Description
+1	destroy
+This action destroys the droppable functionality of an element completely. The elements return to their pre-init state.
+
+2	disable
+This action disables the droppable operation. The elements are no longer droppable elements. This method does not accept any arguments.
+
+3	enable
+This action reactivate the droppable operation. The elements can again receive a droppable element. This method does not accept any arguments.
+
+4	option
+This action gets an object containing key/value pairs representing the current droppable options hash. This method does not accept any arguments.
+
+5	option( optionName )
+This action gets the value of currently associated droppable element with the specified optionName. This takes a String value as argument.
+
+6	option( optionName, value )
+This action sets the value of the droppable option associated with the specified optionName.
+
+7	option( options )
+This action is sets one or more options for the droppable. The argument options is a map of option-value pairs to be set.
+
+8	widget
+This action returns a jQuery object containing the droppable element. This method does not accept any arguments.
+
+Example
+Now let us see an example using the actions from the above table. The following example demonstrates the use of destroy() method.
+We will use (droppabledestroy.html)
+
+If you drop "drag1" on any of the elements named "drop here", you will notice that this element gets dropped and this action destroys the droppable functionality of an element completely. You cannot drop "drag2" and "drag3" on this element again.
+
+
+If you drop "drag1" on any of the elements named "drop here", you will notice that this element gets dropped and this action destroys the droppable functionality of an element completely. You cannot drop "drag2" and "drag3" on this element again.
+
+
+Event Management on droppable elements
+In addition to the droppable (options) method which we saw in the previous sections, JqueryUI provides event methods which gets triggered for a particular event. These event methods are listed below −
+
+Sr.No.	Event Method & Description
+1	activate(event, ui)
+This event is triggered when the accepted draggable element starts dragging. This can be useful if you want to make the droppable "light up" when it can be dropped on.
+
+2	create(event, ui)
+This event is triggered when a droppable element is created. Where event is of type Event, and ui is of type Object.
+
+3	deactivate(event, ui)
+This event is triggered when an accepted draggable stops dragging. Where event is of type Event, and ui is of type Object.
+
+4	drop(event, ui)
+This action is triggered when an element is dropped on the droppable. This is based on the tolerance option. Where event is of type Event, and ui is of type Object.
+
+5	out(event, ui)
+This event is triggered when an accepted draggable element is dragged out of the droppable. This is based on the tolerance option. Where event is of type Event, and ui is of type Object.
+
+6	over(event, ui)
+This event is triggered when an accepted draggable element is dragged over the droppable. This is based on the tolerance option. Where event is of type Event, and ui is of type Object.
+
+Example
+The following example demonstrates the event method usage during drop functionality. This example demonstrates the use of events drop, over and out.
+We will use (droppableeventsdropover.html)
+
+Here you will notice how the message in the droppable element changes as you drag the element
+
+
+
+
+JQUERY UI RESIZABLE
+
+jQueryUI provides resizable() method to resize any DOM element. This method simplifies the resizing of element which otherwise takes time and lot of coding in HTML. The resizable () method displays an icon in the bottom right of the item to resize.
+
+Syntax
+The resizable() method can be used in two forms −
+
+$(selector, context).resizable (options) Method
+
+$(selector, context).resizable ("action", params) Method
+
+$ (selector, context).resizable (options) Method
+The resizable (options) method declares that an HTML element can be resized. The options parameter is an object that specifies the behavior of the elements involved when resizing.
+
+Syntax
+$(selector, context).resizable (options);
+You can provide one or more options at a time of using Javascript object. If there are more than one options to be provided then you will separate them using a comma as follows −
+
+$(selector, context).resizable({option1: value1, option2: value2..... });
+The following table lists the different options that can be used with this method −
+
+Sr.No.	Option & Description
+1	alsoResize
+This option is of type Selector, jQuery , or any DOM Element. It represents elements that also resize when resizing the original object. By default its value is false.
+
+2	animate
+This option when set to true is used to enable a visual effect during resizing when the mouse button is released. The default value is false (no effect).
+
+3	animateDuration
+This option is used to set the duration (in milliseconds) of the resizing effect. This option is used only when animate option is true. By default its value is "slow".
+
+4	animateEasing
+This option is used to specify which easing to apply when using the animate option. By default its value is "swing".
+
+5	aspectRatio
+This option is used to indicate whether to keep the aspect (height and width) ratio for the item. By default its value is false.
+
+6	autoHide
+This option is used to hide the magnification icon or handles, except when the mouse is over the item. By default its value is false.
+
+7	cancel
+This option is used to prevent resizing on specified elements. By default its value is input,textarea,button,select,option.
+
+8	containment
+This option is used restrict the resizing of elements within a specified element or region. By default its value is false.
+
+9	delay
+This option is used to set tolerance or delay in milliseconds. Resizing or displacement will begin thereafter. By default its value is 0.
+
+10	disabled
+This option disables the resizing mechanism when set to true. The mouse no longer resizes elements, until the mechanism is enabled, using the resizable ("enable"). By default its value is false.
+
+11	distance
+With this option, the resizing starts only when the mouse moves a distance(pixels). By default its value is 1 pixel. This can help prevent unintended resizing when clicking on an element.
+
+12	ghost
+This option when set to true, a semi-transparent helper element is shown for resizing. This ghost item will be deleted when the mouse is released. By default its value is false.
+
+13	grid
+This option is of type Array [x, y], indicating the number of pixels that the element expands horizontally and vertically during movement of the mouse. By default its value is false.
+
+14	handles
+This option is a character string indicating which sides or angles of the element can be resized. By default its values are e, s, se.
+
+15	helper
+This option is used to add a CSS class to style the element to be resized. When the element is resized a new <div> element is created, which is the one that is scaled (ui-resizable-helper class). Once the resize is complete, the original element is sized and the <div> element disappears. By default its value is false.
+
+16	maxHeight
+This option is used to set the maximum height the resizable should be allowed to resize to. By default its value is null.
+
+17	maxWidth
+This option is used to set the maximum width the resizable should be allowed to resize to. By default its value is null.
+
+18	minHeight
+This option is used to set the minimum height the resizable should be allowed to resize to. By default its value is 10.
+
+19	minWidth
+This option is used to set the minimum width the resizable should be allowed to resize to. By default its value is 10.
+
+The following section will show you few a working examples of resize functionality.
+
+Default Functionality
+The following example demonstrates a simple example of resizable functionality, passing no parameters to the resizable() method.
+We will use (resizabledefault.html)
+
+
+Use of animate and ghost
+The following example demonstrates the usage of two options animate and ghost in the resize function of JqueryUI.
+We will use (resizableanimateghost.html)
+
+
+Drag the square border to resize and see the effect of animate and ghost options.
+
+
+Use of containment, minHeight, and minWidth
+The following example demonstrates the usage of three options containment, minHeight and minWidth in the resize function of JqueryUI.
+We will use (resizableconminheight.html)
+
+
+Drag the square border to resize, you cannot resize beyond the main container.
+
+
+
+Use of delay, distance, and autoHide
+The following example demonstrates the usage of three options delay, distance and autoHide in the resize function of JqueryUI.
+We will use (resizabledelaydist.html)
+
+
+Drag the square border to resize and you can notice that −
+
+The first square box resizes after a delay of 1000ms,
+
+Second square box starts resizing after the mouse moves 40px.
+
+Hover the mouse on the third square box, and the magnification icon appears.
+
+
+
+Use of alsoResize
+The following example demonstrates the usage of option alsoResize in the resize function of JqueryUI.
+We will use (resizablealsoresize.html)
+
+
+Drag the square border to resize and you can notice that the second square box also resizes with the first square box.
+
+
+Use of AspectRatio, Grid
+The following example demonstrates the usage of option aspectRatio and grid in the resize function of JqueryUI.
+We will use (resizableaspectratio.html)
+
+
+Drag the square border to resize, the first square box resizes with the aspect ratio of 10 / 3 and the second one resizes with grid of [50,20].
+
+
+
+$ (selector, context).resizable ("action", params) Method
+The resizable ("action", params) method can perform an action on resizable elements, such as allowing or preventing resizing functionality. The action is specified as a string in the first argument (e.g., "disable" to prevent the resize). Check out the actions that can be passed, in the following table.
+
+Syntax
+$(selector, context).resizable ("action", params);;
+The following table lists the different actions that can be used with this method −
+
+Sr.No.	Action & Description
+1	destroy
+This action destroys the resizable functionality of an element completely. This will return the element back to its pre-init state.
+
+2	disable
+This action disables the resizing functionality of an element. This method does not accept any arguments.
+
+3	enable
+This action enables the resizing functionality of an element. This method does not accept any arguments.
+
+4	option( optionName )
+This action retrieves the value of the specified optionName. This option corresponds to one of those used with resizable (options).
+
+5	option()
+Gets an object containing key/value pairs representing the current resizable options hash. This does not accept any arguments.
+
+6	option(optionName, value )
+This action sets the value of the resizable option with the specified optionName. This option corresponds to one of those used with resizable (options).
+
+7	option( options )
+This action sets one or more options for the resizable.
+
+8	widget()
+This action returns a jQuery object containing the resizable element. This method does not accept any arguments.
+
+Example
+Now let us see an example using the actions from the above table. The following example demonstrates the use of destroy() and disable() methods.
+We will use (resizabledesdis.html)
+
+
+You cannot resize the first square box as its disabled and the second square box is destroyed.
+
+
+Event Management on resizable elements
+In addition to the resizable (options) method which we saw in the previous sections, JqueryUI provides event methods which gets triggered for a particular event. These event methods are listed below −
+
+Sr.No.	Event Method & Description
+1	create(event, ui)
+This event is triggered when the resizable element is created.
+
+2	resize(event, ui)
+This event is triggered when the handler of resizable element is dragged.
+
+3	start(event, ui)
+This event is triggered at the start of a resize operation.
+
+4	stop(event, ui)
+This event is triggered at the end of a resize operation.
+
+Example
+The following example demonstrates the event method usage during resize functionality. This example demonstrates the use of events create, and resize.
+We will use (resizableeventcreate.html)
+
+Drag the square box and you will see the output getting displayed on resize event.
+
+
+
+
+
+JQUERY UI SELECTABLE
+
+jQueryUI provides selectable() method to select DOM element individually or in a group. With this method elements can be selected by dragging a box (sometimes called a lasso) with the mouse over the elements. Also, elements can be selected by clicking or dragging while holding the Ctrl/Meta key, allowing for multiple (non-contiguous) selections.
+
+Syntax
+The selectable() method can be used in two forms −
+
+$(selector, context).selectable (options) Method
+
+$(selector, context).selectable ("action", params) Method
+
+$ (selector, context).selectable (options) Method
+The selectable (options) method declares that an HTML element contains selectable items. The options parameter is an object that specifies the behavior of the elements involved when selecting.
+
+Syntax
+$(selector, context).selectable (options);
+You can provide one or more options at a time using Javascript object. If there are more than one options to be provided, then you will separate them using a comma as follows −
+
+$(selector, context).selectable({option1: value1, option2: value2..... });
+The following table lists the different options that can be used with this method −
+
+Sr.No.	Option & Description
+1	appendTo
+This option is tells which element the selection helper (the lasso) should be appended to. By default its value is body.
+
+2	autoRefresh
+This option if set to true, the position and size of each selectable item is computed at the beginning of a select operation. By default its value is true.
+
+3	cancel
+This option forbids selecting if you start selection of elements. By default its value is input,textarea,button,select,option.
+
+4	delay
+This option is used to set time in milliseconds and defines when the selecting should start. This can be used to prevent unwanted selections. By default its value is 0.
+
+5	disabled
+This option when set to true, disables the selection mechanism. Users cannot select the elements until the mechanism is restored using the selectable ("enable") instruction. By default its value is false.
+
+6	distance
+This option is the distance (in pixels) the mouse must move to consider the selection in progress. This is useful, for example, to prevent simple clicks from being interpreted as a group selection. By default its value is 0.
+
+7	filter
+This option is a selector indicating which elements can be part of the selection. By default its value is *.
+
+8	tolerance
+This option specifies which mode to use for testing whether the selection helper (the lasso) should select an item. By default its value is touch.
+
+The following section will show you a few working examples of selectable functionality.
+
+Default Functionality
+The following example demonstrates a simple example of selectable functionality, passing no parameters to the selectable() method.
+We will use (selectabledefault.html)
+
+
+Try to click on products, use CTRLS key to select multiple products.
+
+
+Use of Delay and Distance
+The following example demonstrates the usage of two options delay and distance in the selectable function of JqueryUI.
+We will use (selectabledelaydistance.html)
+
+
+Try to click on products, use CTRL key to select multiple products. You will notice that selection of the Product 1, Product 2 and Product 3 start after a delay of 1000ms. Selection of the Product 4, Product 5, Product 6 and Product 7 can't be done individually. The selection starts only after the mouse moves a distance of 100px.
+
+
+
+Use of Filter
+The following example demonstrates the usage of two options delay and distance in the selectable function of JqueryUI.
+We will use (selectablefilter.html)
+
+
+
+Try to click on products. You will notice that only first product can be selected.
+
+
+$ (selector, context).selectable ("action", params) Method
+The selectable ("action", params) method can perform an action on selectable elements, such as preventing selectable functionality. The action is specified as a string in the first argument (e.g., "disable" to stop the selection). Check out the actions that can be passed, in the following table.
+
+Syntax
+$(selector, context).selectable ("action", params);;
+The following table lists the different actions that can be used with this method −
+
+Sr.No.	Action & Description
+1	destroy
+This action removes the selectable functionality of an element completely. The elements return to their pre-init state.
+
+2	disable
+This action deactivates the selectable functionality of an element. This method does not accept any arguments.
+
+3	enable
+This action enables the selectable functionality of an element. This method does not accept any arguments.
+
+4	option( optionName )
+This action gets the value currently associated with the specified optionName.
+
+5	option()
+This action gets an object containing key/value pairs representing the current selectable options hash.
+
+6	option( optionName, value )
+This action sets the value of the selectable option associated with the specified optionName. The argument optionName is name of the option to be set and value is the value to be set for the option.
+
+7	option( options )
+This action is sets one or more options for the selectable. The argument options is a map of option-value pairs to be set.
+
+8	refresh
+This action causes the size and position of the selectable elements to be refreshed. Used mostly when the autoRefresh option is disabled (set to false). This method does not accept any arguments.
+
+9	widget
+This action returns a jQuery object containing the selectable element. This method does not accept any arguments.
+
+
+Example
+Now let us see an example using the actions from the above table. The following example demonstrates the use of disable() and option( optionName, value ) methods.
+We will use (selectabledisoption.html)
+
+
+Try to click on products, use CTRL key to select multiple products. You will notice that Product 1, Product 2, and Product 3 are disabled. Selection of Product 4, Product 5, Product 6 and Product 7 happens after the mouse moves distance of 1px.
+
+
+
+Event Management on Selectable Elements
+In addition to the selectable (options) method which we saw in the previous sections, JqueryUI provides event methods which gets triggered for a particular event. These event methods are listed below −
+
+Sr.No.	Event Method & Description
+1	create(event, ui)
+This event is triggered when the selectable element is created. Where event is of type Event, and ui is of type Object.
+
+2	selected(event, ui)
+This event is triggered for each element that becomes selected. Where event is of type Event, and ui is of type Object.
+
+3	selecting(event, ui)
+This event is triggered for each selectable element that’s about to get selected. Where event is of type Event, and ui is of type Object.
+
+4	start(event, ui)
+This event is triggered at the beginning of the select operation. Where event is of type Event, and ui is of type Object.
+
+5	stop(event, ui)
+This event is triggered at the end of the select operation. Where event is of type Event, and ui is of type Object.
+
+6	unselected(event, ui)
+This event is triggered at the end of the select operation for each element that becomes unselected. Where event is of type Event, and ui is of type Object.
+
+7	unselecting(event, ui)
+This event is triggered during select operation for each selected element that’s about to become unselected. Where event is of type Event, and ui is of type Object.
+
+Example
+The following example demonstrates the event method usage during selectable functionality. This example demonstrates the use of event selected.
+We will use (selectableevents.html)
+
+
+Try to click on products, use CTRL key to select multiple products. You will notice that the product number selected is printed at the bottom.
+
+
+
+
+
+JQUERY UI SORTABLE
+
+jQueryUI provides sortable() method to reorder elements in list or grid using the mouse. This method performs sortability action based upon an operation string passed as the first parameter.
+
+Syntax
+The sortable () method can be used in two forms −
+
+$(selector, context).sortable (options) Method
+
+$(selector, context).sortable ("action", [params]) Method
+
+$ (selector, context).sortable (options) Method
+The sortable (options) method declares that an HTML element contains interchangeable elements. The options parameter is an object that specifies the behavior of the elements involved during reordering.
+
+Syntax
+$(selector, context).sortable(options);
+The following table lists the different options that can be used with this method −
+
+Sr.No.	Option & Description
+1	appendTo
+This option specifies the element in which the new element created with options.helper will be inserted during the time of the move/drag. By default its value is parent.
+
+2	axis
+This option indicates an axis of movement ("x" is horizontal, "y" is vertical). By default its value is false.
+
+3	cancel
+This option is used to prevent sorting of elements by clicking on any of the selector elements. By default its value is "input,textarea,button,select,option".
+
+4	connectWith
+This option is a Selector that identifies another sortable element that can accept items from this sortable. This allows items from one list to be moved to other lists, a frequent and useful user interaction. If omitted, no other element is connected. This is a one-way relationship. By default its value is false.
+
+5	containment
+This option indicates an element within which the displacement takes place. The element will be represented by a selector (only the first item in the list will be considered), a DOM element, or the string "parent" (parent element) or "window" (HTML page).
+
+6	cursor
+Specifies the cursor CSS property when the element moves. It represents the shape of the mouse pointer. By default its value is "auto".
+
+7	cursorAt
+Sets the offset of the dragging helper relative to the mouse cursor. Coordinates can be given as a hash using a combination of one or two keys: { top, left, right, bottom }. By default its value is "false".
+
+8	delay
+Delay, in milliseconds, after which the first movement of the mouse is taken into account. The displacement may begin after that time. By default its value is "0".
+
+9	disabled
+This option if set to true, disables the sortable functionality. By default its value is false.
+
+10	distance
+Number of pixels that the mouse must be moved before the sorting starts. If specified, sorting will not start until after mouse is dragged beyond distance. By default its value is "1".
+
+11	dropOnEmpty
+This option if set to false, then items from this sortable can't be dropped on an empty connect sortable. By default its value is true.
+
+12	forceHelperSize
+If this option if set to true forces the helper to have a size. By default its value is false.
+
+13	forcePlaceholderSize
+This option when set to true, takes into account the size of the placeholder when an item is moved. This option is only useful if options.placeholder is initialized. By default its value is false.
+
+14	grid
+This option is an Array [x, y] indicating the number of pixels that the sorting element moves horizontally and vertically during displacement of the mouse. By default its value is false.
+
+15	handle
+If specified, restricts sort from starting unless the mousedown occurs on the specified element(s). By default its value is false.
+
+16	helper
+Allows for a helper element to be used for dragging display. By default its value is original.
+
+17	items
+This option specifies which items inside the DOM element to be sorted. By default its value is > *.
+
+18	opacity
+This option is used to define the opacity of the helper while sorting. By default its value is false.
+
+19	placeholder
+This option is used to class name that gets applied to the otherwise white space.By default its value is false.
+
+20	revert
+This option decides whether the sortable items should revert to their new positions using a smooth animation. By default its value is false.
+
+21	scroll
+This option is used to enable scrolling. If set to true the page scrolls when coming to an edge. By default its value is true.
+
+22	scrollSensitivity
+This option indicates how many pixels the mouse must exit the visible area to cause scrolling. By default its value is 20. This option is used only with options.scroll set to true.
+
+23	scrollSpeed
+This option indicates the scrolling speed of the display once the scrolling begins. By default its value is 20.
+
+24	tolerance
+This option is a String that specifies which mode to use for testing whether the item being moved is hovering over another item. By default its value is "intersect".
+
+25	zIndex
+This option represents z-index for element/helper while being sorted. By default its value is 1000.
+
+The following section will show you a few working examples of drag functionality.
+
+Default functionality
+The following example demonstrates a simple example of sortable functionality, passing no parameters to the sortable() method.
+We will use (sortabledefault.html)
+
+
+Re-arrange the products above, use mouse to drag items.
+
+
+Use of Options Delay and Distance
+The following example demonstrates the usage of three options (a) delay and (b) distance in the sort function of JqueryUI.
+We will use (sortabledelaydist.html)
+
+
+Re-arrange the products above, use mouse to drag items. To prevent accidental sorting either by delay (time) or distance, we have set a number of milliseconds the element needs to be dragged before sorting starts with the delay option. We have also set a distance in pixels the element needs to be dragged before sorting starts with the distance option.
+
+
+Use of Placeholder
+The following example demonstrates the usage of three option placeholder in the sort function of JqueryUI.
+We will use (sortableplaceholder.html)
+
+
+Try to drag items to rearrange them, while you're dragging items, the placeholder (we have used highlight class to style this space) will show up on an available place.
+
+
+Use of Options Connectwith and Droponempty
+The following example demonstrates the usage of three options (a) connectWith and (b) dropOnEmpty in the sort function of JqueryUI.
+We will use (sortableconnectdrop.html)
+
+
+Try to drag the items under List 3 to the List 2 or List 1. As we have set dropOnEmpty option to false, it won't be possible to drop these items.
+
+
+
+$ (selector, context).sortable ("action", [params]) Method
+The sortable (action, params) method can perform an action on the sortable elements, such as to prevent displacement. The action is specified as a string in the first argument and optionally, one or more params can be provided based on the given action.
+
+Basically, here actions are nothing but they are jQuery methods which we can use in the form of string.
+Syntax
+$(selector, context).sortable ("action", [params]);
+The following table lists the actions for this method −
+
+Sr.No.	Action & Description
+1	cancel()
+This action cancels the current sort operation. This is most useful within handlers for the sort receive and sort stop events. This method does not accept any arguments.
+
+2	destroy()
+This action removes the sortability functionality completely. This will return the element back to its pre-init state. This method does not accept any arguments.
+
+3	disable()
+This action disables the sortability of any sortable elements in the wrapped set. The sortability of the elements isn’t removed and can be restored by calling the enable variant of this method. This method does not accept any arguments.
+
+4	enable()
+Re-enables sortability on any sortable elements in the wrapped set whose sortability has been disabled. Note that this method won’t add sortability to any non-sortable elements. This method does not accept any arguments.
+
+5	option( optionName )
+This action gets the value currently associated with the specified optionName. Where optionName is the name of the option to get.
+
+6	option()
+Gets an object containing key/value pairs representing the current sortable options hash.. This method does not accept any arguments.
+
+7	option( optionName, value )
+This action sets the value of the sortable option associated with the specified optionName. Where optionName is the name of the option to set and value is the value to set for the option.
+
+8	option( options )
+Sets one or more options for the sortable. Where options is a map of option-value pairs to set.
+
+9	refresh()
+This action refreshes the list of items if necessary. This method does not accept any arguments. Calling this method will cause new items added to the sortable to be recognized.
+
+10	toArray( options )
+This method returns an array of the id values of the sortable elements in sorted order. This method takes Options as parameter, to customize the serialization or sorted order.
+
+11	serialize( options )
+This method returns a serialized query string (submittable via Ajax) formed from the sortable.
+
+12	refreshPositions()
+This method is used mostly internally to refresh the cached information of the sortable. This method does not accept any arguments.
+
+13	widget()
+This method returns a jQuery object containing the sortable element. This method does not accept any arguments.
+
+Example
+Now let us see an example using the actions from the above table. The following example demonstrates the use of toArray( options ) method.
+We will use (sortabletoarray.html)
+
+
+Try sorting the items, the order of items is displayed at the bottom. Here we are calling $(this).sortable('toArray').toString(), which will give a string list of all the item id's, it might look like 1,2,3,4.
+
+
+
+Event Management on The Sortable Elements
+In addition to the sortable (options) method which we saw in the previous sections, JqueryUI provides event methods as which gets triggered for a particular event. These event methods are listed below −
+
+Sr.No.	Event Method & Description
+1	activate(event, ui)
+This event is triggered on the sortable when a sort operation starts on connected sortable.
+
+2	beforeStop(event, ui)
+This event is triggered when the sort operation is about to end, with the helper and placeholder element reference still valid.
+
+3	change(event, ui)
+This event is triggered when the sorted element changes position within the DOM.
+
+4	create(event, ui)
+This event is triggered when the sortable is created.
+
+5	deactivate(event, ui)
+This event is triggered when a connected sort stops, propagated to the connected sortable.
+
+6	out(event, ui)
+This event is triggered when the sort item is moved away from a connected list.
+
+7	over(event, ui)
+This event is triggered when a sort item moves into a connected list.
+
+8	receive(event, ui)
+This event is triggered when a connected list has received a sort item from another list.
+
+9	remove(event, ui)
+This event is triggered when the sort item is removed from a connected list and is dragged into another.
+
+10	sort(event, ui)
+This event is repeatedly triggered for mousemove events during a sort operation.
+
+11	start(event, ui)
+This event is triggered when a sort operation starts.
+
+12	stop(event, ui)
+This event is triggered when a sort operation has concluded.
+
+13	update(event, ui)
+This event is triggered when a sort operation stops and the position of the item has been changed.
+
+Example
+The following example demonstrates the event method usage during drop functionality. This example demonstrates the use of events receive, start and stop.
+We will use (sortablereceivestart.html)
+
+
+Try sorting the items in List 1, you will see the message getting displayed at the start and stop of event. Now drop items from List 2 to List 1, again a message gets displayed on the receive event.
+
+
+
+
+////////////////////////////////////////////JQUERY UI WIDGETS:
+There are 11 widgets:
+
+JqueryUI - Accordion
+JqueryUI - Autocomplete
+JqueryUI - Button
+JqueryUI - Datepicker
+JqueryUI - Dialog
+JqueryUI - Menu
+JqueryUI - Progressbar
+JqueryUI - Slider
+JqueryUI - Spinner
+JqueryUI - Tabs
+JqueryUI - Tooltip
+
+ They are all pre-built Widgets that we can use. And they rely on the "interactions" in the interactions category. These Widgets are themable. We can scheme these widgets using a theme roller that is provided on the jQuery UI website. 
+The jQuery UI website is located at jqueryui.com. ANd the website provides a lot of features such as some downloadable themes. 
+We can also build our own download by clicking on the "build custom download link".
+
+
+1.////////////ACCORDION.
+
+Accordion controls basically break contents into sections that can be expanded and revealed. Thw Accordian has a basic default functionality, But there are a lot of properties that you can set.
+We can use "noAutoHeight" function.
+
+Accordion Widget in jQueryUI is a jQuery based expandable and collapsible content holder that is broken into sections and probably looks like tabs. jQueryUI provides accordion() method to achieve this.
+
+Syntax
+The accordion() method can be used in two forms −
+
+$(selector, context).accordion (options) Method
+
+$(selector, context).accordion ("action", params) Method
+
+$ (selector, context).accordion (options) Method
+The accordion (options) method declares that an HTML element and its contents should be treated and managed as accordion menus. The options parameter is an object that specifies the appearance and behavior of the menu involved.
+
+Syntax
+$(selector, context).accordion (options);
+You can provide one or more options at a time using Javascript object. If there are more than one options to be provided then you will separate them using a comma as follows −
+
+$(selector, context).accordion({option1: value1, option2: value2..... });
+The following table lists the different options that can be used with this method −
+
+Sr.No.	Option & Description
+1	active
+Indicates the index of the menu that is open when the page is first accessed. By default its value is 0, i.e the first menu.
+
+2	animate
+This option is used to set how to animate changing panels. By default its value is {}.
+
+3	collapsible
+This option when set to true, it allows users to close a menu by clicking on it. By default, clicks on the open panel’s header have no effect. By default its value is false.
+
+4	disabled
+This option when set to true disables the accordion. By default its value is false.
+
+5	event
+This option specifies the event used to select an accordion header. By default its value is click.
+
+6	header
+This option specifies a selector or element to override the default pattern for identifying the header elements. By default its value is > li > :first-child,> :not(li):even.
+
+7	heightStyle
+This option is used to control the height of accordion and panels. By default its value is auto.
+
+8	icons
+This option is an object that defines the icons to use to the left of the header text for opened and closed panels. The icon to use for closed panels is specified as a property named header, whereas the icon to use for open panels is specified as a property named headerSelected. By default its value is { "header": "ui-icon-triangle-1-e", "activeHeader": "ui-icon-triangle-1-s" }.
+
+The following section will show you a few working examples of accordion widget functionality.
+
+Default Functionality
+The following example demonstrates a simple example of accordion widget functionality, passing no parameters to the accordion() method.
+We will use (accordiondefault.html)
+
+Click headers(Tab 1,Tab 2,Tab 3) to expand/collapse content that is broken into logical sections, much like tabs.
+
+
+Use of collapsible
+The following example demonstrates the usage of three options collapsible in the accordion widget of JqueryUI.
+We will use (accordioncollapsible.html)
+
+Here we have set collapsible to true. Click on an accordion header, this allows collapsing the active section.
+
+
+Use of heightStyle
+The following example demonstrates the usage of three options heightStyle in the accordion widget of JqueryUI.
+We will use (accordionheightstyle.html)
+
+Here we have two accordions, the first one has heightStyle option set to content, which allows the accordion panels to keep their native height. Second accordion has heightStyle option set to fill, the script will automatically set the dimensions of the accordion to the height of its parent container.
+
+
+
+$ (selector, context).accordion ("action", params) Method
+The accordion ("action", params) method can perform an action on accordion elements, such as selecting/de-selecting the accordion menu. The action is specified as a string in the first argument (e.g., "disable" disables all menus). Check out the actions that can be passed, in the following table.
+
+Syntax
+$(selector, context).accordion ("action", params);;
+The following table lists the different actions that can be used with this method −
+
+Sr.No.	Action & Description
+1	destroy
+This action destroys the accordion functionality of an element completely. The elements return to their pre-init state.
+
+2	disable
+This action disable all menus. No click will be taken into account. This method does not accept any arguments.
+
+3	enable
+This action reactivate all menus. The clicks are again considered. This method does not accept any arguments.
+
+4	option( optionName )
+This action gets the value of currently associated accordion element with the specified optionName. This takes a String value as argument.
+
+5	option
+This action gets an object containing key/value pairs representing the current accordion options hash.
+
+6	option( optionName, value )
+This action sets the value of the accordion option associated with the specified optionName.
+
+7	option( options )
+This action sets one or more options for the accordion.
+
+8	refresh
+This action processes any headers and panels that were added or removed directly in the DOM. It then recomputes the height of the accordion panels. Results depend on the content and the heightStyle option. This method does not accept any arguments.
+
+9	widget
+This action returns the accordion widget element; the one annotated with the ui-accordion class name.
+
+
+Example
+Now let us see an example using the actions from the above table. The following example demonstrates the use of option( optionName, value ) method.
+We will use (accordionoptnameval.html)
+
+Here we demonstrate enabling and disabling of the accordions. Select the respective radio buttons to check each action
+
+
+Event Management on accordion elements
+In addition to the accordion (options) method which we saw in the previous sections, JqueryUI provides event methods which gets triggered for a particular event. These event methods are listed below −
+
+Sr.No.	Event Method & Description
+1	activate(event, ui)
+This event is triggered when a menu is activated. This event is only fired on panel activation, it is not fired for the initial panel when the accordion widget is created.
+
+2	beforeActivate(event, ui)
+This event is triggered before a panel is activated. This event can be canceled to prevent the panel from activating.
+
+3	create(event, ui)
+This event is triggered when the accordion is created.
+
+Example
+The following example demonstrates the event method usage in accordion widgets. This example demonstrates the use of events create, beforeActive and active.
+We will use (accordionevtcrtbefore.html)
+
+
+
+
+
+
+
+
+2.//////////////AUTOCOMPLETE.
+
+Auto completion is a mechanism frequently used in modern websites to provide the user with a list of suggestions for the beginning of the word, which he/she has typed in a text box. The user can then select an item from the list, which will be displayed in the input field. This feature prevents the user from having to enter an entire word or a set of words.
+
+The autocomplete() method can be used in two forms :
+
+$(selector, context).autocomplete (options) Method
+
+$(selector, context).autocomplete ("action", params)
+
+
+$ (selector, context).autocomplete ("action", params) Method
+The autocomplete ("action", params) method can perform an action on the list of suggestions, such as show or hide. The action is specified as a String in the first argument (e.g., "close" to hide the list). Check out the actions that can be passed, in the following table.
+
+
+Syntax
+$(selector, context).autocomplete ("action", params);;
+The following table lists the different actions that can be used with this method −
+
+	Action & Description.
+
+1	close
+This action hides the list of suggestions in the Autocomplete menu. This method does not accept any arguments.
+
+2	destroy
+This action removes the autocomplete functionality. Lists of suggestions are deleted. This method does not accept any arguments.
+
+3	disable
+This action disables the autocompletion mechanism. The list of suggestions no longer appears. This method does not accept any arguments.
+
+4	enable
+This action reactivates the autocompletion mechanism. The list of suggestions will again be displayed. This method does not accept any arguments.
+
+5	option( optionName )
+This action retrieves the value of the specified param optionName. This option corresponds to one of those used with autocomplete (options).
+
+6	option
+This action gets an object containing key/value pairs representing the current autocomplete options hash.
+
+7	option( optionName, value )
+This action sets the value of the autocomplete option associated with the specified optionName. The argument optionName is name of the option to be set and value is the value to be set for the option.
+
+8	option( options )
+This action is sets one or more options for the autocomplete. The argument options is a map of option-value pairs to be set.
+
+9	search( [value ] )
+This action searches for correspondence between the string value and the data source (specified in options.source). The minimum number of characters (indicated in options.minLength) must be reached in value, otherwise the search is not performed.
+
+10	widget
+Retrieve the <ul> DOM element corresponding to the list of suggestions. This is an object of jQuery class that allows easy access to the list without using jQuery selectors.
+
+
+   EXTENSION POINTS
+
+The autocomplete widget can be extended as its built with the widget factory. When extending widgets, you have the ability to override or add to the behavior of existing methods. The following table lists methods that act as extension points with the same API stability as the plugin methods listed above.
+
+	Method & Description
+
+1	_renderItem( ul, item )
+This method controls the creation of each option in the widget's menu. This method creates a new <li> element, appends it to the menu and return it.
+
+2	_renderMenu( ul, items )
+This method controls building the widget's menu.
+
+3	_resizeMenu()
+This method controls sizing the menu before it is displayed.The menu element is available at this.menu.element. This method does not accept any arguments.
+
+Event Management on Autocomplete Elements
+In addition to the autocomplete (options) method which we saw in the previous sections, JqueryUI provides event methods which gets triggered for a particular event. These event methods are listed below −
+
+	Event Method & Description
+
+1	change(event, ui)
+This event is triggered when the value of the <input> element is changed based upon a selection. When triggered, this event will always come after the close event is triggered.
+
+2	close(event, ui)
+This event is triggered whenever the autocomplete menu closes.
+
+3	create(event, ui)
+This event is triggered when the autocomplete is created.
+
+4	focus(event, ui)
+This event is triggered whenever one of the menu choices receives focus. Unless canceled (for example, by returning false), the focused value is set into the <input> element.
+
+5	open(event, ui)
+This event is triggered after the data has been readied and the menu is about to open.
+
+6	response(event, ui)
+This event is triggered after a search completes, before the menu is shown. This event is always triggered when a search completes, even if the menu will not be shown because there are no results or the Autocomplete is disabled.
+
+7	search(event, ui)
+This event is triggered after any delay and minLength criteria have been met, just before the mechanism specified by source is activated. If canceled, the search operation is aborted.
+
+8	select(event, ui)
+This event is triggered when a value is selected from the autocomplete menu. Canceling this event prevents the value from being set into the <input> element (but doesn’t prevent the menu from closing).
+
+
+
+Check out the default functionality on(autocompleteexample.html).
+
+check out the autoFocus function on (autocomautofocus.html).
+
+check out the use of minLength and delay on (autocomminlength.html)
+
+check out the use of label on (autocomlabel.html)
+
+Check out the use of External Source on (autocomexternalsrc.html)
+
+(See how to use the   option( optionName, value )   method. In the autocomoptval.html )
+
+Check out the use of events focus and select on (autocomevtsfocsel.html)
+
+
+
+3.///////////////BUTTON.
+
+jQueryUI provides button() method to transform the HTML elements (like buttons, inputs and anchors) into themeable buttons, with automatic management of mouse movements on them, all managed transparently by jQuery UI.
+
+In order to group radio buttons, Button also provides an additional widget, called Buttonset. Buttonset is used by selecting a container element (which contains the radio buttons) and calling .buttonset().
+
+Syntax
+
+The button() method can be used in two forms −
+
+$(selector, context).button (options) Method
+
+$(selector, context).button ("action", params) Method
+
+
+$ (selector, context).button (options) Method
+The button (options) method declares that an HTML element should be treated as button. The options parameter is an object that specifies the behavior and appearance of the button.
+
+Syntax
+
+$(selector, context).button (options);
+You can provide one or more options at a time using Javascript object. If there are more than one options to be provided then you will separate them using a comma as follows −
+
+$(selector, context).button({option1: value1, option2: value2..... });
+The following table lists the different options that can be used with this method −
+
+Sr.No.	Option & Description
+1	disabled
+This option deactivates the button is set to true. By default its value is false.
+
+2	icons
+This option specifies that one or two icons are to be displayed in the button: primary icons to the left, secondary icons to the right. The primary icon is identified by the primary property of the object, and the secondary icon is identified by the secondary property. By default its value is primary: null, secondary: null.
+
+3	label
+This option specifies text to display on the button that overrides the natural label. If omitted, the natural label for the element is displayed. In the case of radio buttons and checkboxes, the natural label is the <label> element associated with the control. By default its value is null.
+
+4	text
+This option specifies whether text is to be displayed on the button. If specified as false, text is suppressed if (and only if) the icons option specifies at least one icon. By default its value is true.
+
+Default Functionality
+The following example demonstrates a simple example of button widget functionality, passing no parameters to the button() method.
+
+$ (selector, context).button (options) Method
+The button (options) method declares that an HTML element should be treated as button. The options parameter is an object that specifies the behavior and appearance of the button.
+
+Syntax
+$(selector, context).button (options);
+You can provide one or more options at a time using Javascript object. If there are more than one options to be provided then you will separate them using a comma as follows −
+
+$(selector, context).button({option1: value1, option2: value2..... });
+The following table lists the different options that can be used with this method −
+
+Sr.No.	Option & Description
+1	disabled
+This option deactivates the button is set to true. By default its value is false.
+
+2	icons
+This option specifies that one or two icons are to be displayed in the button: primary icons to the left, secondary icons to the right. The primary icon is identified by the primary property of the object, and the secondary icon is identified by the secondary property. By default its value is primary: null, secondary: null.
+
+3	label
+This option specifies text to display on the button that overrides the natural label. If omitted, the natural label for the element is displayed. In the case of radio buttons and checkboxes, the natural label is the <label> element associated with the control. By default its value is null.
+
+4	text
+This option specifies whether text is to be displayed on the button. If specified as false, text is suppressed if (and only if) the icons option specifies at least one icon. By default its value is true.
+
+Default Functionality
+
+The following example demonstrates a simple example of button widget functionality, passing no parameters to the button() method.
+We are using  (buttondflt.html)
+
+This example demonstrates the markup that can be used for buttons: A button element, an input of type submit and an anchor
+
+
+Use of icons, text and disabled.
+The following example demonstrates the usage of two options icons, text and disabled in the button function of JqueryUI. 
+We are using (buttonicntxtdis.html)
+
+Here you can see a button with only icon, a button with two icons and a disabled button.
+
+
+$ (selector, context).button ("action", params) Method
+The button ("action", params) method can perform an action on buttons, such as disabling the button. The action is specified as a string in the first argument (e.g., "disable" to disable button). Check out the actions that can be passed, in the following table.
+
+Syntax
+$(selector, context).button ("action", params);
+The following table lists the different actions that can be used with this method −
+
+Sr.No.	Action & Description
+1	destroy
+This action removes the button functionality of an element completely. The elements return to their pre-init state. This method does not accept any arguments.
+
+2	disable
+This action disables the button functionality of an element. This method does not accept any arguments.
+
+3	enable
+This action enables the button functionality of an element. This method does not accept any arguments.
+
+4	option( optionName )
+This action retrieves the value of the option specified in optionName. Where optionName is a String.
+
+5	option
+This action retrieves an object containing key/value pairs representing the current button options hash.
+
+6	option( optionName, value )
+This action sets the value of the button option associated with the specified optionName.
+
+7	option( options )
+This action sets one or more options for the button. Where options is map of option-value pairs to set.
+
+8	refresh
+This action refreshes the display of the button. This is useful when the buttons are handled by the program and the display does not necessarily correspond to the internal state. This method does not accept any arguments.
+
+9	widget
+This action returns a jQuery object containing the button element. This method does not accept any arguments.
+
+Example
+Now let us see an example using the actions from the above table. The following example demonstrates the use of destroy() and disable() methods. 
+We are using (butttondesdis.html)
+
+
+Event Management on Buttons
+
+In addition to the button (options) method which we saw in the previous sections, JqueryUI provides event methods which gets triggered for a particular event. These event methods are listed below −
+
+Sr.No.	Event Method & Description
+1	create(event, ui)
+This event is triggered when the button is created. Where event is of type Event, and ui is of type Object.
+
+Example
+The following example demonstrates the event method usage for button widget functionality. This example demonstrates the use of event create.
+We are using (buttonevtcreate.html)
+
+
+
+
+
+DATEPICKER.
+
+Datepickers in jQueryUI allow users to enter dates easily and visually. You can customize the date format and language, restrict the selectable date ranges and add in buttons and other navigation options easily.
+
+jQueryUI provides datepicker() method that creates a datepicker and changes the appearance of HTML elements on a page by adding new CSS classes. Transforms the <input>, <div>, and <span> elements in the wrapped set into a datepicker control.
+
+By default, for <input> elements, the datepicker calendar opens in a small overlay when the associated text field gains focus. For an inline calendar, simply attach the datepicker to a <div>, or <span> element.
+Syntax
+The datepicker() method can be used in two forms −
+
+$(selector, context).datepicker (options) Method
+
+$(selector, context).datepicker ("action", [params]) Method
+
+$ (selector, context).datepicker (options) Method
+The datepicker (options) method declares that an <input> element (or <div>, or <span>, depending on how you choose to display the calendar) should be managed as a datepicker. The options parameter is an object that specifies the behavior and appearance of the datepicker elements.
+Syntax
+$(selector, context).datepicker(options);
+You can provide one or more options at a time using Javascript object. If there are more than one options to be provided then you will separate them using a comma as follows −
+
+$(selector, context).datepicker({option1: value1, option2: value2..... });
+The following table lists the different options that can be used with this method −
+
+Sr.No.	Option & Description
+1	altField
+This option specifies a jQuery selector for a field that is also updated with any date selections. The altFormat option can be used to set the format for this value. This is quite useful for setting date values into a hidden input element to be submitted to the server, while displaying a more user-friendly format to the user. By default its value is "".
+
+2	altFormat
+This option is used when an altField option is specified. It provides the format for the value to be written to the alternate element. By default its value is "".
+
+3	appendText
+This option is a String value to be placed after the <input> element, intended to show instructions to the user. By default its value is "".
+
+4	autoSize
+This option when set to true resizes the <input> element to accommodate the datepicker’s date format as set with the dateFormat option. By default its value is false.
+
+5	beforeShow
+This option is a callback function that’s invoked just before a datepicker is displayed, with the <input> element and datepicker instance passed as parameters. This function can return an options hash used to modify the datepicker. By default its value is "".
+
+6	beforeShowDay
+This option is a callback function which takes a date as parameter, that’s invoked for each day in the datepicker just before it’s displayed, with the date passed as the only parameter. This can be used to override some of the default behavior of the day elements. This function must return a three-element array.By default its value is null.
+
+7	buttonImage
+This option specifies the path to an image to be displayed on the button enabled by setting the showOn option to one of buttons or both. If buttonText is also provided, the button text becomes the alt attribute of the button. By default its value is "".
+
+8	buttonImageOnly
+This option if set to true, specifies that the image specified by buttonImage is to appear standalone (not on a button). The showOn option must still be set to one of button or both for the image to appear. By default its value is false.
+
+9	buttonText
+This option specifies the caption for the button enabled by setting the showOn option to one of button or both. By default its value is "...".
+
+10	calculateWeek
+This option is a custom function to calculate and return the week number for a date passed as the lone parameter. The default implementation is that provided by the $.datepicker.iso8601Week() utility function.
+
+11	changeMonth
+This option if set to true, a month dropdown is displayed, allowing the user to directly change the month without using the arrow buttons to step through them. By default its value is false.
+
+12	changeYear
+This option if set to true, a year dropdown is displayed, allowing the user to directly change the year without using the arrow buttons to step through them. Option yearRange can be used to control which years are made available for selection. By default its value is false.
+
+13	closeText
+This option specifies the text to replace the default caption of Done for the close button. It is used when the button panel is displayed via the showButtonPanel option. By default its value is "Done".
+
+14	constrainInput
+This option if set true (the default), text entry into the <input> element is constrained to characters allowed by the current dateformat option. By default its value is true.
+
+15	currentText
+This option specifies the text to replace the default caption of Today for the current button. This is used if the button panel is displayed via the showButtonPanel option. By default its value is Today.
+
+16	dateFormat
+This option specifies the date format to be used. By default its value is mm/dd/yy.
+
+17	dayNames
+This option is a 7-element array providing the full day names with the 0th element representing Sunday. Can be used to localize the control. By default its value is [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ].
+
+18	dayNamesMin
+This option is a 7-element array providing the minimal day names with the 0th element representing Sunday, used as column headers. Can be used to localize the control. By default its value is [ "Su", "Mo", "Tu", "We", "Th", "Fr", "Sa" ].
+
+19	dayNamesShort
+This option specifies a 7-element array providing the short day names with the 0th element representing Sunday. Can be used to localize the control. By default its value is [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ].
+
+20	defaultDate
+This option sets the initial date for the control, overriding the default value of today, if the <input> element has no value. This can be a Date instance, the number of days from today, or a string specifying an absolute or relative date. By default its value is null.
+
+21	duration
+This option specifies the speed of the animation that makes the datepicker appear. Can be one of slow, normal, or fast, or the number of milliseconds for the animation to span. By default its value is normal.
+
+22	firstDay
+This option specifies which day is considered the first day of the week, and will be displayed as the left-most column. By default its value is 0.
+
+23	gotoCurrent
+This option when set to true, the current day link is set to the selected date, overriding the default of today. By default its value is false.
+
+24	hideIfNoPrevNext
+This option if set to true, hides the next and previous links (as opposed to merely disabling them) when they aren’t applicable, as determined by the settings of the minDate and maxDate options. By default its value is false.
+
+25	isRTL
+This option when set to true, specifies the localizations as a right-to-left language. By default its value is false.
+
+26	maxDate
+This option sets the maximum selectable date for the control. This can be a Date instance, the number of days from today, or a string specifying an absolute or relative date. By default its value is null.
+
+27	minDate
+This option sets the minimum selectable date for the control. This can be a Date instance, the number of days from today, or a string specifying an absolute or relative date. By default its value is null.
+
+28	monthNames
+This option is a 12-element array providing the full month names with the 0th element representing January. Can be used to localize the control. By default its value is [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ].
+
+29	monthNamesShort
+This option specifies a 12-element array providing the short month names with the 0th element representing January. Can be used to localize the control. By default its value is [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ].
+
+30	navigationAsDateFormat
+This option if set to true, the navigation links for nextText, prevText, and currentText are passed through the $.datepicker.formatDate() function prior to display. This allows date formats to be supplied for those options that get replaced with the relevant values. By default its value is false.
+
+31	nextText
+This option specifies the text to replace the default caption of Next for the next month navigation link. ThemeRoller replaces this text with an icon. By default its value is Next.
+
+32	numberOfMonths
+This option specifies the number of months to show in the datepicker. By default its value is 1.
+
+33	onChangeMonthYear
+This option is a callback that’s invoked when the datepicker moves to a new month or year, with the selected year, month (1-based), and datepicker instance passed as parameters, and the function context is set to the input field element. By default its value is null.
+
+34	onClose
+This option is a callback invoked whenever a datepicker is closed, passed the selected date as text (the empty string if there is no selection), and the datepicker instance, and the function context is set to the input field element. By default its value is null.
+
+35	onSelect
+This option is a callback invoked whenever a date is selected, passed the selected date as text (the empty string if there is no selection), and the datepicker instance, and the function context is set to the input field element. By default its value is null.
+
+36	prevText
+This option specifies the text to replace the default caption of Prev for the previous month navigation link. (Note that the ThemeRoller replaces this text with an icon). By default its value is PrevdefaultDatedayNamesMin.
+
+37	selectOtherMonths
+This option if set to true, days shown before or after the displayed month(s) are selectable. Such days aren’t displayed unless the showOtherMonths option is true. By default its value is false.
+
+38	shortYearCutoff
+This option if its a number, specifies a value between 0 and 99 years before which any 2-digit year values will be considered to belong to the previous century. If this option is a string, the value undergoes a numeric conversion and is added to the current year. The default is +10 which represents 10 years from the current year.
+
+39	showAnim
+This option specifies sets the name of the animation to be used to show and hide the datepicker. If specified, must be one of show (the default), fadeIn, slideDown, or any of the jQuery UI show/hide animations. By default its value is show.
+
+40	showButtonPanel
+This option if set to true, a button panel at the bottom of the datepicker is displayed, containing current and close buttons. The caption of these buttons can be provided via the currentText and closeText options. By default its value is false.
+
+41	showCurrentAtPos
+This option specifies the 0-based index, starting at the upper left, of where the month containing the current date should be placed within a multi-month display. By default its value is 0.
+
+42	showMonthAfterYear
+This option specifies if set to true, the positions of the month and year are reversed in the header of the datepicker. By default its value is false.
+
+43	showOn
+This option specifies when the datepicker should appear. The possible values are focus, button or both. By default its value is focus.
+
+44	showOptions
+This option provides a hash to be passed to the animation when a jQuery UI animation is specified for the showAnim option. By default its value is {}.
+
+45	showOtherMonths
+This option if set to true, dates before or after the first and last days of the current month are displayed. These dates aren't selectable unless the selectOtherMonths option is also set to true. By default its value is false.
+
+46	showWeek
+This option if set to true, the week number is displayed in a column to the left of the month display. The calculateWeek option can be used to alter the manner in which this value is determined. By default its value is false.
+
+47	stepMonths
+This option specifies specifies how many months to move when one of the month navigation controls is clicked. By default its value is 1.
+
+48	weekHeader
+This option specifies the text to display for the week number column, overriding the default value of Wk, when showWeek is true. By default its value is Wk.
+
+49	yearRange
+This option specifies limits on which years are displayed in the dropdown in the form from:to when changeYear is true. The values can be absolute or relative (for example: 2005:+2, for 2005 through 2 years from now). The prefix c can be used to make relative values offset from the selected year rather than the current year (example: c-2:c+3). By default its value is c-10:c+10.
+
+50	yearSuffix
+This option displays additional text after the year in the datepicker header. By default its value is "".
+
+
+			DEFAULT FUNCTIONALITY.
+
+The following example demonstrates a simple example of datepicker functionality passing no parameters to the datepicker() method.
+WE are using (datepickerdefault.html).
+
+Inline Datepicker
+The following example demonstrates a simple example of inline datepicker functionality.
+We are using (datepickerinline.html)
+
+
+Use of appendText, dateFormat, altField and altFormat
+The following example shows the usage of three important options (a) appendText (b) dateFormat (c) altField and (d) altFormat in the datepicker function of JqueryUI.
+We are using (datepickerapptxtfmt.html)
+
+
+Use of beforeShowDay
+The following example shows the usage of option beforeShowDay in the datepicker function of JqueryUI.
+We are using (datepickerbfshowday.html)
+
+
+Use of showOn, buttonImage, and buttonImageOnly
+The following example shows the usage of three important options (a) showOn (b) buttonImage and (c) buttonImageOnly in the datepicker function of JqueryUI.
+
+We are using (datepickershowonbtnimg.html)
+
+
+Use of defaultDate, dayNamesMin, and duration
+The following example shows the usage of three important options (a) dayNamesMin (b) dayNamesMin and (c) duration in the datepicker function of JqueryUI.
+We are using (datepickerusedfltdate.html)
+
+
+Use of prevText, nextText, showOtherMonths and selectOtherMonths
+The following example shows the usage of three important options (a) prevText (b) nextText (c) showOtherMonths and (d) selectOtherMonths in the datepicker function of JqueryUI.
+We wil use (datepickerprevtxt.html)
+
+In the above example the prev and nect links have captions. If you click on the element, the datepicker opens. Now in the first datepicker, the other months dates are disable as selectOtherMonths is setfalse. In the second date picker for second input type, the selectOtherMonths is set totrue.
+
+
+Use of changeMonth, changeYear, and numberOfMonths
+The following example shows the usage of three important options (a) changeMonth (b) changeYear and (c) numberOfMonths in the datepicker function of JqueryUI.
+
+we will use (datepickerchgmth.html)
+
+In the above example, you can see dropdown menus for Month and Year fields. And we are dispalying 4 months in an array structure of [2,2].
+
+
+Use of showWeek, yearSuffix, and showAnim
+The following example shows the usage of three important options (a) showWeek (b) yearSuffix and (c) showAnim in the datepicker function of JqueryUI.
+
+We will use (datepickershwkyr.html)
+
+In the above example, you can see that week numbers are displayed on the left side of datepicker as showWeek is set to true. The year is have a suffix of "-CE".
+
+
+
+$ (selector, context).datepicker ("action", [params]) Method
+The datepicker (action, params) method can perform an action on the calendar, such as such as selecting a new date. The action is specified as a string in the first argument and optionally, one or more params can be provided based on the given action.
+
+Basically, here actions are nothing but they are jQuery methods which we can use in the form of string.
+Syntax
+$(selector, context).datepicker ("action", [params]);
+The following table lists the actions for this method −
+
+Sr.No.	Action & Description
+1	destroy()
+This action removes the datepicker functionality completely. This will return the element back to its pre-init state. This method does not accept any arguments.
+
+2	dialog( date [, onSelect ] [, settings ] [, pos ] )
+This action displays datepicker in a jQuery UI dialog box.
+
+3	getDate()
+This action returns the Date corresponding to the selected date. This method does not accept any arguments.
+
+4	hide()
+This action closes the previously opened date picker. This method does not accept any arguments.
+
+5	isDisabled()
+This action checks if the date picker funcitonality is disabled. This method does not accept any arguments.
+
+6	option( optionName )
+This action retrieves the value currently associated with the specified optionName.
+
+7	option()
+This action gets an object containing key/value pairs representing the current datepicker options hash. This method does not accept any arguments.
+
+8	option( optionName, value )
+This action sets the value of the datepicker option associated with the specified optionName.
+
+9	option( options )
+This action sets one or more options for the datepicker.
+
+10	refresh()
+This action redraws the date picker, after having made some external modifications. This method does not accept any arguments.
+
+11	setDate( date )
+This action sets the specified date as the current date of the datepicker.
+
+12	show()
+This action opens the date picker. If the datepicker is attached to an input, the input must be visible for the datepicker to be shown. This method does not accept any arguments.
+
+13	widget()
+This action returns a jQuery object containing the datepicker.
+
+
+
+Use of setDate() action
+Now let us see an example using the actions from the above table. The following example demonstrates the use of actions setDate.
+We will use (datepickersetdate.html)
+
+
+Use of show() action
+The following example demonstrates the use of action show.
+We will use (datepickershowaction.html)
+
+
+
+
+DIALOG BOXES.
+
+Dialog boxes are one of the nice ways of presenting information on an HTML page. A dialog box is a floating window with a title and content area. This window can be moved, resized, and of course, closed using "X" icon by default.
+
+jQueryUI provides dialog() method that transforms the HTML code written on the page into HTML code to display a dialog box.
+
+Syntax
+The dialog() method can be used in two forms −
+
+$(selector, context).dialog (options) Method
+
+$(selector, context).dialog ("action", [params]) Method
+
+$ (selector, context).dialog (options) Method
+The dialog (options) method declares that an HTML element can be administered in the form of a dialog box. The options parameter is an object that specifies the appearance and behavior of that window.
+Syntax
+
+$(selector, context).dialog(options);
+You can provide one or more options at a time using Javascript object. If there are more than one options to be provided then you will separate them using a comma as follows −
+
+$(selector, context).dialog({option1: value1, option2: value2..... });
+The following table lists the different options that can be used with this method −
+
+	Option & Description
+
+1	appendTo
+If this option is set to false, it will prevent the ui-draggable class from being added in the list of selected DOM elements. By default its value is true.
+
+2	autoOpen
+This option unless set to false, the dialog box is opened upon creation. When false, the dialog box will be opened upon a call to dialog('open'). By default its value is true.
+
+3	buttons
+This option adds buttons in the dialog box. These are listed as objects, and each property is the text on the button. The value is a callback function called when the user clicks the button. By default its value is {}.
+
+4	closeOnEscape
+Unless this option set to false, the dialog box will be closed when the user presses the Escape key while the dialog box has focus. By default its value is true.
+
+5	closeText
+This option contains text to replace the default of Close for the close button. By default its value is "close".
+
+6	dialogClass
+If this option is set to false, it will prevent the ui-draggable class from being added in the list of selected DOM elements. By default its value is "".
+
+7	draggable
+Unless you this option to false, dialog box will be draggable by clicking and dragging the title bar. By default its value is true.
+
+8	height
+This option sets the height of the dialog box. By default its value is "auto".
+
+9	hide
+This option is used to set the effect to be used when the dialog box is closed. By default its value is null.
+
+11	maxHeight
+This option sets maximum height, in pixels, to which the dialog box can be resized. By default its value is false.
+
+12	maxWidth
+This option sets the maximum width to which the dialog can be resized, in pixels. By default its value is false.
+
+13	minHeight
+This option is the minimum height, in pixels, to which the dialog box can be resized. By default its value is 150.
+
+14	minWidth
+This option is the minimum width, in pixels, to which the dialog box can be resized. By default its value is 150.
+
+15	modal
+If this option is set to true, the dialog will have modal behavior; other items on the page will be disabled, i.e., cannot be interacted with. Modal dialogs create an overlay below the dialog but above other page elements. By default its value is false.
+
+16	position
+This option specifies the initial position of the dialog box. Can be one of the predefined positions: center (the default), left, right, top, or bottom. Can also be a 2-element array with the left and top values (in pixels) as [left,top], or text positions such as ['right','top']. By default its value is { my: "center", at: "center", of: window }.
+
+17	resizable
+This option unless set to false, the dialog box is resizable in all directions. By default its value is true.
+
+18	show
+This option is an effect to be used when the dialog box is being opened. By default its value is null.
+
+20	title
+This option specifies the text to appear in the title bar of the dialog box. By default its value is null.
+
+21	width
+This option specifies the width of the dialog box in pixels. By default its value is 300.
+
+
+Default functionality
+The following example demonstrates a simple example of dialog functionality passing no parameters to the dialog() method.
+We will use (dialogdfltfn.html)
+
+
+Use of buttons, title and position
+The following example demonstrates the usage of three options buttons, title and position in the dialog widget of JqueryUI.
+We will use (dialogbtntit.html)
+
+
+Use of hide, show and height
+The following example demonstrates the usage of three options hide, show and height in the dialog widget of JqueryUI.
+We will use (dialoghideshow.html)
+
+
+Use of Modal
+The following example demonstrates the usage of three options buttons, title and position in the dialog widget of JqueryUI.
+We will use (dialogmodal.html)
+
+
+$ (selector, context).dialog ("action", [params]) Method
+The dialog (action, params) method can perform an action on the dialog box, such as closing the box. The action is specified as a string in the first argument and optionally, one or more params can be provided based on the given action.
+
+Basically, here actions are nothing but they are jQuery methods which we can use in the form of string.
+Syntax
+$(selector, context).dialog ("action", [params]);
+The following table lists the actions for this method −
+
+Sr.No.	Action & Description
+1	close()
+This action closes the dialog box. This method does not accept any arguments.
+
+2	destroy()
+This action removes the dialog box competely. This will return the element back to its pre-init state. This method does not accept any arguments.
+
+3	isOpen()
+This action checks if the dialog box is open. This method does not accept any arguments.
+
+4	moveToTop()
+This action positions the corresponding dialog boxes to the foreground (on top of the others). This method does not accept any arguments.
+
+5	open()
+This action opens the dialog box. This method does not accept any arguments.
+
+6	option( optionName )
+This action gets the value currently associated with the specified optionName. Where optionName is the name of the option to get.
+
+7	option()
+This action gets an object containing key/value pairs representing the current dialog options hash. This method does not accept any arguments.
+
+8	option( optionName, value )
+This action sets the value of the dialog option associated with the specified optionName.
+
+9	option( options )
+This action sets one or more options for the dialog.
+
+10	widget()
+This action returns the dialog box’s widget element; the element annotated with the ui-dialog class name. This method does not accept any arguments.
+
+
+Now let us see an example using the actions from the above table. The following example demonstrates the use of isOpen(), open() and close() methods.
+We will use (dialogopenclose.html)
+
+
+Event Management on Dialog Box
+In addition to the dialog (options) method which we saw in the previous sections, JqueryUI provides event methods as which gets triggered for a particular event. These event methods are listed below −
+
+Sr.No.	Event Method & Description
+1	beforeClose(event, ui)
+This event is triggered when the dialog box is about to close. Returning false prevents the dialog box from closing. It is handy for dialog boxes with forms that fail validation. Where event is of type Event, and ui is of type Object.
+
+2	close(event, ui)
+This event is triggered when the dialog box is closed. Where event is of type Event, and ui is of type Object.
+
+3	create(event, ui)
+This event is triggered when the dialog box is created. Where event is of type Event, and ui is of type Object.
+
+4	drag(event, ui)
+This event is triggered repeatedly as a dialog box is moved about during a drag. Where event is of type Event, and ui is of type Object.
+
+5	dragStart(event, ui)
+This event is triggered when a repositioning of the dialog box commences by dragging its title bar. Where event is of type Event, and ui is of type Object.
+
+6	dragStop(event, ui)
+This event is triggered when a drag operation terminates. Where event is of type Event, and ui is of type Object.
+
+7	focus(event, ui)
+This event is triggered when the dialog gains focus. Where event is of type Event, and ui is of type Object.
+
+8	open(event, ui)
+This event is triggered when the dialog box is opened. Where event is of type Event, and ui is of type Object.
+
+9	resize(event, ui)
+This event is triggered repeatedly as a dialog box is resized. Where event is of type Event, and ui is of type Object.
+
+10	resizeStart(event, ui)
+This event is triggered when a resize of the dialog box commences. Where event is of type Event, and ui is of type Object.
+
+11	resizeStop(event, ui)
+This event is triggered when a resize of the dialog box terminates. Where event is of type Event, and ui is of type Object.
+
+
+Use of beforeClose Event method
+The following example demonstrates the use of beforeClose event method.
+We will use (dialogbfclose.html)
+
+
+
+Use of resize Event method
+The following example demonstrates the use of resize event method.
+We will use (dialogresize.html)
+
+
+
+Extension Points
+The dialog widget is built with the widget factory and can be extended. To extend widgets, we can either override or add to the behavior of existing methods. Following method provides as extension point with the same API stability as the dialog methods. Listed in the above table.
+
+	Method & Description
+
+1	_allowInteraction(event)
+This method allows the user to interact with a given target element by whitelisting elements that are not children of the dialog but allow the users to be able to use. Where event is of type Event.
+
+The jQuery UI Widget Factory is an extensible base on which all of jQuery UI's widgets are built. Using the widget factory to build a plugin provides conveniences for state management, as well as conventions for common tasks like exposing plugin methods and changing options after instantiation.
+
+
+
+
+MENU
+
+A menu widget usually consists of a main menu bar with pop up menus. Items in pop up menus often have sub pop up menus. A menu can be created using the markup elements as long as the parent-child relation is maintained (using <ul> or <ol>). Each menu item has an anchor element.
+
+The Menu Widget in jQueryUI can be used for inline and popup menus, or as a base for building more complex menu systems. For example, you can create nested menus with custom positioning.
+
+jQueryUI provides menu() methods to create a menu.
+
+Syntax
+
+The menu() method can be used in two forms −
+
+$(selector, context).menu (options) Method
+
+$(selector, context).menu ("action", params) Method
+
+$ (selector, context).menu (options) Method
+The menu (options) method declares that an HTML element and its contents should be treated and managed as menus. The options parameter is an object that specifies the appearance and behavior of the menu items involved.
+
+Syntax
+$(selector, context).menu (options);
+You can provide one or more options at a time using Javascript object. If there are more than one options to be provided then you will separate them using a comma as follows −
+
+$(selector, context).menu({option1: value1, option2: value2..... });
+The following table lists the different options that can be used with this method −
+
+	Option & Description
+
+1	disabled
+This option if set to true disables the menu. By default its value is false.
+
+2	icons
+This option sets the icons for submenus. By default its value is { submenu: "ui-icon-carat-1-e" }.
+
+3	menus
+This option is a selector for the elements that serve as the menu container, including sub-menus. By default its value is ul.
+
+4	position
+This option sets the position of submenus in relation to the associated parent menu item. By default its value is { my: "left top", at: "right top" }.
+
+5	role
+This option is used to customize the ARIA roles used for the menu and menu items. By default its value is menu.
+
+
+Default Functionality
+The following example demonstrates a simple example of menu widget functionality, passing no parameters to the menu() method.
+We will use (menudefault.html)
+
+In the above example, you can see a themeable menu with mouse and keyboard interactions for navigation.
+
+
+Use of icons and position
+The following example demonstrates the usage of two options icons, and position in the menu function of JqueryUI.
+We will use (menuicnpos.html)
+
+
+In the above example, you can see we have applied an icon image for the submenu list and also changed the submenu position
+
+
+$ (selector, context).menu ("action", params) Method
+The menu ("action", params) method can perform an action on menu elements, such as enabling/disabling the menu. The action is specified as a string in the first argument (e.g., "disable" disables the menu). Check out the actions that can be passed, in the following table.
+
+Syntax
+$(selector, context).menu ("action", params);;
+The following table lists the different actions that can be used with this method −
+
+Sr.No.	Action & Description
+1	blur( [event ] )
+This action removes the focus from a menu. It triggers the menu's blur event by resetting any active element style. Where event is of type Event and represents what triggered the menu to blur.
+
+2	collapse( [event ] )
+This action closes the current active sub-menu. Where event is of type Event and represents what triggered the menu to collapse.
+
+3	collapseAll( [event ] [, all ] )
+This action closes all the open submenus.
+
+4	destroy()
+This action removes menu functionality completely. This will return the element back to its pre-init state. This method does not accept any arguments.
+
+5	disable()
+This action disables the menu. This method does not accept any arguments.
+
+6	enable()
+This action enables the the menu. This method does not accept any arguments.
+
+7	expand( [event ] )
+This action opens the sub-menu below the currently active item, if one exists. Where event is of type Event and represents what triggered the menu to expand.
+
+8	focus( [event ], item )
+This action activates a particular menu item, begins opening any sub-menu if present and triggers the menu's focus event. Where event is of type Event and represents what triggered the menu to gain focus. and item is a jQuery object representing the menu item to focus/activate.
+
+9	isFirstItem()
+This action returns a boolean value, which states if the current active menu item is the first menu item. This method does not accept any arguments.
+
+10	isLastItem()
+This action returns a boolean value, which states if the current active menu item is the last menu item. This method does not accept any arguments.
+
+11	next( [event ] )
+This action delegates the active state to the next menu item. Where event is of type Event and represents what triggered the focus to move.
+
+12	nextPage( [event ] )
+This action moves active state to first menu item below the bottom of a scrollable menu or the last item if not scrollable. Where event is of type Event and represents what triggered the focus to move.
+
+13	option( optionName )
+This action gets the value currently associated with the specified optionName. Where optionName is of type String and represents the name of the option to get.
+
+14	option()
+This action gets an object containing key/value pairs representing the current menu options hash.
+
+15	option( optionName, value )
+This action sets the value of the menu option associated with the specified optionName. Where optionName is of type String and represents name of option to set and value is of type Object and represents value to set for the option.
+
+16	option( options )
+This action sets one or more options for the menu. Where options is of type Object and represents a map of option-value pairs to set.
+
+17	previous( [event ] )
+This action moves active state to previous menu item. Where event is of type Event and represents what triggered the focus to move.
+
+18	previousPage( [event ] )
+This action moves active state to first menu item above the top of a scrollable menu or the first item if not scrollable. Where event is of type Event and represents what triggered the focus to move.
+
+19	refresh()
+This action initializes sub-menus and menu items that have not already been initialized. This method does not accept any arguments.
+
+20	select( [event ] )
+This action selects the currently active menu item, collapses all sub-menus and triggers the menu's select event. Where event is of type Event and represents what triggered the selection.
+
+21	widget()
+This action returns a jQuery object containing the menu. This method does not accept any arguments.
+
+The following examples demonstrate how to use the actions given in the above table.
+
+
+Use of disable method
+The following example demonstrates the use of disable() method.
+We will use (menudisable.html)
+
+
+Use of focus and collapseAll methods
+The following example demonstrates the use of focus() and collapseAll methods.
+We will use (menucollapseall.html)
+
+In the above example, you can see the focus is on the last menu item. Now expand the submenu and when the mouse leaves the submenu, the submenu is closed.
+
+Event Management on menu elements
+In addition to the menu (options) method which we saw in the previous sections, JqueryUI provides event methods which gets triggered for a particular event. These event methods are listed below −
+
+Sr.No.	Event Method & Description
+1	blur(event, ui)
+This event is triggered when a menu loses focus.
+
+2	create(event, ui)
+This event is triggered when a menu is created.
+
+3	focus(event, ui)
+This event is triggered when a menu gains focus or when any menu item is activated.
+
+4	select(event, ui)
+This event is triggered when a menu item is selected.
+
+Example
+The following example demonstrates the event method usage for menu widget functionality. This example demonstrates the use of event create, blur and focus.
+We will use (menuevtcrt.html)
+
+In the above example, we are printing the messages based on the events triggered.
+
+
+
+PROGRESSBAR
+Progress bars indicate the completion percentage of an operation or process. We can categorize progress bar as determinate progress bar and indeterminate progress bar.
+
+Determinate progress bar should only be used in situations where the system can accurately update the current status. A determinate progress bar should never fill from left to right, then loop back to empty for a single process.
+
+If the actual status cannot be calculated, an indeterminate progress bar should be used to provide user feedback.
+
+jQueryUI provides an easy-to-use progress bar widget that we can use to let users know that our application is hard at work performing the requested operation. jQueryUI provides progressbar() method to create progress bars.
+
+Syntax
+The progressbar() method can be used in two forms −
+
+$(selector, context).progressbar (options) Method
+
+$(selector, context).progressbar ("action", params) Method
+
+$ (selector, context).progressbar (options) Method
+The progressbar (options) method declares that an HTML element can be managed in the form of a progress bar. The options parameter is an object that specifies the appearance and behavior of progress bars.
+
+Syntax
+$(selector, context).progressbar (options);
+You can provide one or more options at a time using Javascript object. If there are more than one options to be provided then you will separate them using a comma as follows −
+
+$(selector, context).progressbar({option1: value1, option2: value2..... });
+The following table lists the different options that can be used with this method −
+
+Sr.No.	Option & Description
+1	disabled
+This option when set to true disables the progress bars. By default its value is false.
+
+2	max
+This option sets the maximum value for a progress bar. By default its value is 100.
+
+3	value
+This option specifies the initial value of the progress bar. By default its value is 0.
+
+The following section will show you a few working examples of progressbar functionality.
+
+Default Functionality
+The following example demonstrates a simple example of progressbar functionality, passing no parameters to the progressbar() method.
+We will use (progressbardefault.html)
+
+This example shows the creation of progress bar using of progressbar() method. This is a default determinate progress bar.
+
+
+Use of max and value
+The following example demonstrates the usage of two options values and max in the progressbar function of JqueryUI.
+We will use (progressbarmax.html)
+
+Here you can see that the progress bar fills from right to left and stops when the value reaches 300.
+
+
+$ (selector, context).progressbar ("action", params) Method
+The progressbar ("action", params) method can perform an action on progress bar, such as changing the percentage filled. The action is specified as a string in the first argument (e.g., "value" to change the percentage filled). Check out the actions that can be passed, in the following table.
+
+Syntax
+$(selector, context).progressbar ("action", params);;
+The following table lists the different actions that can be used with this method −
+
+Sr.No.	Action & Description
+1	destroy
+This action removes the progress bar functionality of an element completely. The elements return to their pre-init state. This method does not accept any arguments.
+
+2	destroy
+This action removes the progress bar functionality of an element completely. The elements return to their pre-init state. This method does not accept any arguments.
+
+3	disable
+This action disables the progress bar functionality of an element. This method does not accept any arguments.
+
+4	enable
+This action enables the progress bar functionality. This method does not accept any arguments.
+
+5	option( optionName )
+This action retrieves the value currently associated with specified optionName. Where optionName is a String.
+
+6	option
+This action gets an object containing key/value pairs representing the current progressbar options hash. This method does not accept any arguments.
+
+7	option( optionName, value )
+This action sets the value of the progressbar option associated with the specified optionName.
+
+8	option( options )
+This action sets one or more options for the progress bars. The argument options is a map of option-value pairs to be set.
+
+9	value
+This action retrieves the current value of options.value, that is, the percentage of fill in the progress bar.
+
+10	value( value )
+This action specifies a new value to the percentage filled in the progress bar. The argument value can be a Number or Boolean.
+
+11	widget
+This action returns a jQuery object containing the progressbar. This method does not accept any arguments.
+
+Example
+Now let us see an example using the actions from the above table. The following example demonstrates the use of disable() and option( optionName, value ) methods.
+We will use (progressbardisopt.html)
+
+
+Event Management on progress bar elements
+In addition to the progressbar (options) method which we saw in the previous sections, JqueryUI provides event methods which gets triggered for a particular event. These event methods are listed below −
+
+Sr.No.	Event Method & Description
+1	change(event, ui)
+This event is triggered whenever the value of progress bar changes. Where event is of type Event, and ui is of type Object.
+
+2	complete(event, ui)
+This event is triggered when the progressbar reaches the maximumm value. Where event is of type Event, and ui is of type Object.
+
+3	create(event, ui)
+This event is triggered whenever progressbar is created. Where event is of type Event, and ui is of type Object.
+
+Example
+The following example demonstrates the event method usage during progressbar functionality. This example demonstrates the use of events change and complete.
+We will use (progressbarevtchcom.html)
+
+
+Here you can see as the progressbar changes its changed value is printed and upon complete event the "Loading Completed!" message displays.
+
+
+
+
+SLIDER
+A slider is used whenever a numeric value within a certain range is to be obtained. The advantage of a slider over text input is that it becomes impossible for the user to enter a bad value. Any value that they can pick with the slider is valid.
+
+jQueryUI provides us a slider control through slider widget. jQueryUI provides slider() method changes the appearance of HTML elements in the page, adding new CSS classes that give them the appropriate style.
+
+Syntax
+The slider () method can be used in two forms −
+
+$(selector, context).slider (options) Method
+
+$(selector, context).slider ("action", params) Method
+
+$ (selector, context).slider (options) Method
+The slider (options) method declares that an HTML element should be managed as a slider. The options parameter is an object that specifies the appearance and behavior of slider.
+
+Syntax
+$(selector, context).slider (options);
+You can provide one or more options at a time using Javascript object. If there are more than one options to be provided then you will separate them using a comma as follows −
+
+$(selector, context).slider({option1: value1, option2: value2..... });
+The following table lists the different options that can be used with this method −
+
+Sr.No.	Option & Description
+1	animate
+This option when set to true, creates an animated effect when users click directly on the axis. By default its value is false.
+
+2	disabled
+This option when set to true, disables the slider. By default its value is false.
+
+3	max
+This option specifies the upper value of the range that the slider can attain—the value represented when the handle is moved to the far right (for horizontal sliders) or top (for vertical sliders). By default its value is 100.
+
+4	min
+This option specifies the lower value of the range that the slider can attain—the value represented when the handle is moved to the far left (for horizontal sliders) or bottom (for vertical sliders). By default its value is 0.
+
+5	orientation
+This option indicates the horizontal or vertical orientation of the slider. By default its value is horizontal.
+
+6	range
+This option specifies whether the slider represents a range. By default its value is false.
+
+7	step
+This option specifies discrete intervals between the minimum and maximum values that the slider is allowed to represent. By default its value is 1.
+
+8	value
+This option specifies the initial value of a single-handle slider. If there are multiple handles (see the values options), specifies the value for the first handle. By default its value is 1.
+
+9	values
+This option is of type Array and causes multiple handles to be created and specifies the initial values for those handles. This option should be an array of possible values, one for each handle. By default its value is null.
+
+The following section will show you a few working examples of slider functionality.
+
+
+Default Functionality
+The following example demonstrates a simple example of slider functionality, passing no parameters to the slider() method.
+We will use (sliderdfltfn.html)
+
+In the above example, it is a basic horizontal slider and has a single handle that can be moved with the mouse or by using the arrow keys
+
+
+Use of value, animate, and orientation
+The following example demonstrates the usage of three options (a) value (b) animate and, (c) orientation in the slider function of JqueryUI.
+We will use (slidervalanor.html)
+
+In the above example the value of slider i.e the initial value is set as 60, hence you see the handle at initial value of 60. Now just click directly on the axis and see the animation effect.
+
+
+Use of Range, Min, Max and Values
+The following example demonstrates the usage of three options (a) range, (b) min, (c) max, and (d) values in the slider function of JqueryUI.
+We will use (sliderrangemin.html)
+
+In the above example we have set the range option to true to capture a range of values with two drag handles. The space between the handles is filled with a different background color to indicate those values are selected.
+
+
+$ (selector, context).slider ("action", params) Method
+The slider ("action", params) method allows an action on the slider, such as moving the cursor to a new location. The action is specified as a string in the first argument (e.g., "value" to indicate a new value of the cursor). Check out the actions that can be passed, in the following table.
+
+Syntax
+$(selector, context).slider ("action", params);;
+The following table lists the different actions that can be used with this method −
+
+Sr.No.	Action & Description
+1	destroy
+This action destroys the slider functionality of an element completely. The elements return to their pre-init state. This method does not accept any arguments.
+
+2	disable
+This action disables the slider functionality. This method does not accept any arguments.
+
+3	enable
+This action enables the slider functionality. This method does not accept any arguments.
+
+4	option( optionName )
+This action retrieves the value of the specified param option. This option corresponds to one of those used with slider (options). Where optionName is the name of the option to get.
+
+5	option()
+This action gets an object containing key/value pairs representing the current slider options hash.
+
+6	option( optionName, value )
+This action sets the value of the slider option associated with the specified optionName. The argument optionName is name of the option to be set and value is the value to be set for the option.
+
+7	option( options )
+This action sets one or more options for the slider. The argument options is a map of option-value pairs to be set.
+
+8	value
+This action retrieves the current value of options.value (the slider). Use only if the slider is unique (if not, use slider ("values")). This signature does not accept any arguments.
+
+9	value( value )
+This action sets the value of the slider.
+
+10	values
+This action retrieves the current value of options.values (the value of the sliders in an array). This signature does not accept any arguments.
+
+11	values( index )
+This action gets the value for the specified handle. Where index is of type Integer and is a zero-based index of the handle.
+
+12	values( index, value )
+This action sets the value for the specified handle. Where index is the zero-based index of the handle and value is the value to set.
+
+13	values( values )
+This action sets the value for all the handles.
+
+14	widget
+This action returns a jQuery object containing the slider. This method does not accept any arguments.
+
+Example
+Now let us see an example using the actions from the above table. The following example demonstrates the use of disable() and value() method.
+We will use (sliderdisval.html)
+
+In the above example, the first slider is disabled and the second slider the value is set to 50.
+
+
+
+Event Management on slider elements
+In addition to the slider (options) method which we saw in the previous sections, JqueryUI provides event methods which gets triggered for a particular event. These event methods are listed below −
+
+Sr.No.	Event Method & Description
+1	change(event, ui)
+This event is triggered handle’s value changes, either through user action or programmatically.
+
+2	create(event, ui)
+This event is triggered when the slider is created.
+
+3	slide(event, ui)
+This event is triggered for mouse move events whenever the handle is being dragged through the slider. Returning false cancels the slide.
+
+4	start(event, ui)
+This event is triggered when the user starts sliding.
+
+5	stop(event, ui)
+This event is triggered when a slide stops.
+
+Example
+The following example demonstrates the event method usage during slider functionality. This example demonstrates the use of events start, stop, change and slide.
+We will use (sliderevtstart.html)
+
+
+
+
+SPINNER
+
+Spinner widget adds a up/down arrow to the left of a input box thus allowing a user to increment/decrement a value in the input box. It allows users to type a value directly, or modify an existing value by spinning with the keyboard, mouse or scrollwheel. It also has a step feature to skip values. In addition to the basic numeric features, it also enables globalized formatting options (ie currency, thousand separator, decimals, etc.) thus providing a convenient internationalized masked entry box.
+
+The following example depends on Globalize. You can get the Globalize files from https://github.com/jquery/globalize. Click the releases link, select the version you want, and download the .zip or tar.gz file. Extract the files and copy the following files to the folder where your example is located.
+
+lib/globalize.js : This file contains the Javascript code for dealing with localizations
+
+lib/globalize.culture.js : This file contains a complete set of the locales that the Globalize library comes with.
+
+These files are also present in the external folder of your jquery-ui library.
+
+jQueryUI provides spinner() method which creates a spinner.
+
+Syntax
+The spinner() method can be used in two forms −
+
+$(selector, context).spinner (options) Method
+
+$(selector, context).spinner ("action", params) Method
+
+$ (selector, context).spinner (options) Method
+The spinner (options) method declares that an HTML element and its contents should be treated and managed as spinner. The options parameter is an object that specifies the appearance and behavior of the spinner elements involved.
+
+Syntax
+$(selector, context).spinner (options);
+You can provide one or more options at a time using Javascript object. If there are more than one options to be provided then you will separate them using a comma as follows −
+
+$(selector, context).spinner({option1: value1, option2: value2..... });
+The following table lists the different options that can be used with this method −
+
+Sr.No.	Option & Description
+1	culture
+This option sets the culture to use for parsing and formatting the value. By default its value is null which means the currently set culture in Globalize is used.
+
+2	disabled
+This option if set to true disables spinner. By default its value is false.
+
+3	icons
+This option sets icons to use for buttons, matching an icon provided by the jQuery UI CSS Framework. By default its value is { down: "ui-icon-triangle-1-s", up: "ui-icon-triangle-1-n" }.
+
+4	incremental
+This option controls the number of steps taken when holding down a spin button. By default its value is true.
+
+5	max
+This option indicates the maximum allowed value. By default its value is null which means there is no maximum enforced.
+
+6	min
+This option indicates the minimum allowed value. By default its value is null which means there is no minimum enforced.
+
+7	numberFormat
+This option indicates format of numbers passed to Globalize, if available. Most common are "n" for a decimal number and "C" for a currency value. By default its value is null.
+
+8	page
+This option indicates the number of steps to take when paging via the pageUp/pageDown methods. By default its value is 10.
+
+9	step
+This option indicates size of the step to take when spinning via buttons or via the stepUp()/stepDown() methods. The element's step attribute is used if it exists and the option is not explicitly set.
+
+The following section will show you a few working examples of spinner widget functionality.
+
+
+Default Functionality
+The following example demonstrates a simple example of spinner widget functionality, passing no parameters to the spinner() method.
+We will use (spinnerdefault.html)
+
+
+Use of Min, Max and Step Options
+The following example demonstrates the usage of three options min, max and step in the spinner widget of JqueryUI.
+We will use (spinnerminmax.html)
+
+
+In the above example, you can see in the first spinner the max and min values are set to 10 and -10 respectively. Hence crossing these values, the spinner will stop incrementing/decrementing. In the second spinner the spinner value increments/decrements in steps of 100.
+
+
+Use of icons Option
+The following example demonstrates the usage of option icons in the spinner widget of JqueryUI.
+We will use(spinnericnopt.html)
+
+In the above example, you can notice the images spinner are changed.
+
+
+
+Use of culture, numberFormat, and page options
+The following example demonstrates the usage of three options culture, numberFormat and page in the spinner widget of JqueryUI.
+We will use (spinnerculnum.html)
+
+In the above example, you can see the spinner displays the number in currency format as the numberFormat is set to "C" and culture is set to "de-DE". Here we have used the Globalize files from the jquery-ui library.
+
+
+$ (selector, context).spinner ("action", params) Method
+The spinner ("action", params) method can perform an action on spinner elements, such as enabling/disabling the spinner. The action is specified as a string in the first argument (e.g., "disable" disables the spinner). Check out the actions that can be passed, in the following table.
+
+Syntax
+$(selector, context).spinner ("action", params);;
+The following table lists the different actions that can be used with this method −
+
+Sr.No.	Action & Description
+1	destroy
+This action destroys the spinner functionality of an element completely. The elements return to their pre-init state. This method does not accept any arguments.
+
+2	disable
+This action disables the spinner functionality. This method does not accept any arguments.
+
+3	enable
+This action enables the spinner functionality. This method does not accept any arguments.
+
+4	option( optionName )
+This action gets the value currently associated with the specified optionName. Where optionName is the name of the option to get.
+
+5	option
+This action gets an object containing key/value pairs representing the current spinner options hash. This method does not accept any arguments.
+
+6	option( optionName, value )
+This action sets the value of the spinner option associated with the specified optionName.
+
+7	option( options )
+This action sets one or more options for the spinner.
+
+8	pageDown( [pages ] )
+This action decrements the value by the specified number of pages, as defined by the page option.
+
+9	pageUp( [pages ] )
+This action increments the value by the specified number of pages, as defined by the page option.
+
+10	stepDown( [steps ] )
+This action decrements the value by the specified number of steps.
+
+11	stepUp( [steps ] )
+This action increments the value by the specified number of steps.
+
+12	value
+This action gets the current value as a number. The value is parsed based on the numberFormat and culture options. This method does not accept any arguments.
+
+13	value( value )
+This action sets the value. if value is passed value is parsed based on the numberFormat and culture options.
+
+14	widget
+This action returns the spinner widget element; the one annotated with the ui-spinner class name.
+
+The following examples demonstrate how to use the actions given in the above table.
+
+
+Use of action stepUp, stepDown, pageUp, and pageDown
+The following example demonstrates the use of stepUp, stepDown, pageUp and pageDown methods.
+We will use (spinneractstepup.html)
+
+In the above example, use the respective buttons to increment/decrement the spinner.
+
+
+Use of action enable, and disable
+The following example demonstrates the use of enable and disable methods.
+We will use (spinneractendis)
+
+In the above example, use the Enable/Disable buttons to enable or disable the spinner.
+
+
+
+Event Management on Spinner Elements
+In addition to the spinner (options) method which we saw in the previous sections, JqueryUI provides event methods which gets triggered for a particular event. These event methods are listed below −
+
+Sr.No.	Event Method & Description
+1	change(event, ui)
+This event is triggered when the value of the spinner has changed and the input is no longer focused.
+
+2	create(event, ui)
+This event is triggered when the spinner is created.
+
+3	spin(event, ui)
+This event is triggered during increment/decrement.
+
+4	start(event, ui)
+This event is triggered before a spin. Can be canceled, preventing the spin from occurring.
+
+5	stop(event, ui)
+This event is triggered after a spin.
+
+
+Example
+The following example demonstrates the event method usage in spinner widgets. This example demonstrates the use of events spin, change and stop.
+We will use (spinnerspinchange.html)
+
+In the above example change the value of the spinner and see, the messages being displayed below for spin and stop events. Now change the focus of the spinner and you see a message being displayed on change event.
+
+
+Extension Points
+The spinner widget is built with the widget factory and can be extended. To extend widgets, we can either override or add to the behavior of existing methods. Following method provides as extension point with the same API stability as the spinner methods. Listed in the above table.
+
+Sr.No.	Method & Description
+1	_buttonHtml(event)
+This method return a String which is an HTML. This HTML can be used for the spinner's increment and decrement buttons. Each button must be given a ui-spinner-button class name for the associated events to work. This method does not accept any arguments.
+
+2	_uiSpinnerHtml(event)
+This method determine the HTML to use to wrap the spinner's <input> element. This method does not accept any arguments.
+
+The jQuery UI Widget Factory is an extensible base on which all of jQuery UI's widgets are built. Using the widget factory to build a plugin provides conveniences for state management, as well as conventions for common tasks like exposing plugin methods and changing options after instantiation.
+
+
+TABS
+Tabs are sets of logically grouped content that allow us to quickly flip between them to. Tabs allow us to save space like accordions. For tabs to work properly following set of markups needs to use −
+
+Tabs must be in a list either ordered(<ol>) or unordered(<ul>).
+
+Each tab title must be within each <li> and wrapped by anchor (<a>) tag with an href attribute.
+
+Each tab panel may be any valid element but it must have an id, which corresponds to the hash in the anchor of the associated tab.
+
+jQueryUI provides us tabs () method drastically changes the appearance of HTML elements inside the page. This method traverses (internally in jQuery UI) HTML code and adds new CSS classes to the elements concerned (here, the tabs) to give them the appropriate style.
+
+Syntax
+The tabs () method can be used in two forms −
+
+$(selector, context).tabs (options) Method
+
+$(selector, context).tabs ("action", params) Method
+
+$ (selector, context).tabs (options) Method
+The tabs (options) method declares that an HTML element and its content should be managed as tabs. The options parameter is an object that specifies the appearance and behavior of tabs.
+
+Syntax
+$(selector, context).tabs (options);
+You can provide one or more options at a time using JavaScript object. If there are more than one options to be provided then you will separate them using a comma as follows −
+
+$(selector, context).tabs({option1: value1, option2: value2..... });
+The following table lists the different options that can be used with this method −
+
+Sr.No.	Option & Description
+1	active
+This option specifies the current active tab/panel. By default its value is 0.
+
+2	collapsible
+This option set to true, it allows tabs to be deselected. When set to false (the default), clicking on a selected tab does not deselect (it remains selected). By default its value is false.
+
+3	disabled
+This option uses an array to indicate index tabs that are disabled (and therefore cannot be selected). For example, use [0, 1] to disable the first two tabs. By default its value is false.
+
+4	event
+This option is a name of the event that lets users select a new tab. If, for example, this option is set to "mouseover", passing the mouse over a tab will select it. By default its value is "click".
+
+5	heightStyle
+This option controls the height of the tabs widget and each panel. By default its value is "content".
+
+6	hide
+This option specifies how to animate hiding of panel. By default its value is null.
+
+7	show
+This option specifies how to animate showing of panel. By default its value is null.
+
+The following section will show you a few working examples of tabs functionality.
+
+
+Default Functionality
+The following example demonstrates a simple example of tabs functionality, passing no parameters to the tabs() method.
+We will use (tabsdefault.html)
+
+In the above example, click on tabs to swap between content.
+
+
+Use of heightStyle, collapsible, and hide
+The following example demonstrates the usage of three options (a) heightStyle (b) collapsible, and (c) hide in the tabs function of JqueryUI.
+We will use (tabsheightcol.html).
+
+Click the selected tab to toggle its content closed/open. You can also see the animation effect "slideUp" when the tab is closed.
+
+
+Use of Event
+The following example demonstrates the usage of three options event in the tabs function of JqueryUI.
+We will use (tabseventuse.html)
+
+In the above example toggle the sections open/closed with mouseover the tabs.
+
+
+
+$ (selector, context).tabs ("action", params) Method
+The tabs ("action", params) method allows an action on the tabs (through a JavaScript program), selecting, disabling, adding, or removing a tab. The action is specified as a string in the first argument (e.g., "add" to add a new tab). Check out the actions that can be passed, in the following table.
+
+Syntax
+$(selector, context).tabs ("action", params);;
+The following table lists the different actions that can be used with this method −
+
+Sr.No.	Action & Description
+1	destroy
+This action destroys the tabs functionality of an element completely. The elements return to their pre-init state. This method does not accept any arguments.
+
+2	disable
+This action disables all tabs. This method does not accept any arguments.
+
+3	disable( index )
+This action disables the specified tab. Where index is the tab to be disabled.
+
+4	enable
+This action activates all the tabs. This signature does not accept any arguments.
+
+5	enable( index )
+This action activates a specified tab. Where index is the tab to be enabled.
+
+6	load( index )
+This action forces a reload of the indexed tab, ignoring the cache. Where index is the tab to load.
+
+7	option( optionName )
+This action gets the value currently associated with the specified optionName.
+
+8	option
+This action gets an object containing key/value pairs representing the current tabs options hash.
+
+9	option( optionName, value )
+This action sets the value of the tabs option associated with the specified optionName. The argument optionName is name of the option to be set and value is the value to be set for the option.
+
+10	option( options )
+This action sets one or more options to the tabs.
+
+11	refresh
+This action recomputes the height of the tab panels when any tabs that were added or removed directly in the DOM. Results depend on the content and the heightStyle option.
+
+12	widget
+This action returns the element serving as the tabs widget, annotated with the ui-tabs class name.
+
+
+Use of Action Disable()
+Now let us see an example using the actions from the above table. The following example demonstrates the use of disable() method.
+We will use (tabsactiondis.html)
+
+Here you can see all the tabs are disabled.
+
+
+Use of Action Disable(index)
+Now let us see an example using the actions from the above table. The following example demonstrates the use of disable(index) method.
+We will use (tabsactiondisindex.html)
+
+In the above example, you notice that Tab 3 is disabled.
+
+
+Event Management on tabs elements
+In addition to the tabs (options) method which we saw in the previous sections, JqueryUI provides event methods which gets triggered for a particular event. These event methods are listed below −
+
+Sr.No.	Event Method & Description
+1	activate(event, ui)
+This event is triggered after the tab has been activated (after the completion of animation).
+
+2	beforeActivate(event, ui)
+This event is triggered before a the tab has been activated.
+
+3	beforeLoad(event, ui)
+This event is triggered when a remote tab is about to be loaded, after the beforeActivate event. This event is triggered just before the Ajax request is made.
+
+4	create(event, ui)
+This event is triggered when tabs are created.
+
+5	load(event, ui)
+This event is triggered after a remote tab has been loaded.
+
+
+Example
+The following example demonstrates the event method usage in tabs widgets. This example demonstrates the use of events activate and create.
+We will use (tabsactivatecrt.html)
+
+Click on the tabs to see a message getting printed below on specific to events.
+
+
+
+
+TOOLTIP
+Tooltip widget of jQueryUI replaces the native tooltips. This widget adds new themes and allows for customization. First let us understand what tooltips are? Tooltips can be attached to any element. To display tooltips, just add title attribute to input elements and title attribute value will be used as tooltip. When you hover the element with your mouse, the title attribute is displayed in a little box next to the element.
+
+jQueryUI provides tooltip() method to add tooltip to any element on which you want to display tooltip. This gives a fade animation by default to show and hide the tooltip, compared to just toggling the visibility.
+
+Syntax
+The tooltip() method can be used in two forms −
+
+$(selector, context).tooltip (options) Method
+
+$(selector, context).tooltip ("action", [params]) Method
+
+$ (selector, context).tooltip (options) Method
+The tooltip (options) method declares that a tooltip can be added to an HTML element. The options parameter is an object that specifies the behavior and appearance of the tooltip.
+Syntax
+$(selector, context).tooltip(options);
+You can provide one or more options at a time using Javascript object. If there are more than one options to be provided then you will separate them using a comma as follows −
+
+$(selector, context).tooltip({option1: value1, option2: value2..... });
+The following table lists the different options that can be used with this method −
+
+Sr.No.	Option & Description
+1	content
+This option represents content of a tooltip. By default its value is function returning the title attribute.
+
+2	disabled
+This option when set to true disables the tooltip. By default its value is false.
+
+3	hide
+This option represents the animation effect when hiding the tooltip. By default its value is true.
+
+4	items
+This option indicates which items can show tooltips. By default its value is [title].
+
+5	position
+This option decides the position of the tooltip w.r.t the associated target element. By default its value is function returning the title attribute. Possible values are: my, at, of, collision, using, within.
+
+6	show
+This option represents how to animate the showing of tooltip. By default its value is true.
+
+7	tooltipClass
+This option is a class which can be added to the tooltip widget for tooltips such as warning or errors. By default its value is null.
+
+8	track
+This option when set to true, the tooltip follows/tracks the mouse. By default its value is false.
+
+The following section will show you a few working examples of tooltip functionality.
+
+Default Functionality
+The following example demonstrates a simple example of tooltip functionality passing no parameters to the tooltip() method.
+We will use (tooltipdefault.html)
+
+In the above example, hover over the links above or use the tab key to cycle the focus on each element.
+
+
+Use of Content, Track and Disabled
+The following example shows the usage of three important options (a) content (b) track and (c) disabled in the tooltip function of JqueryUI.
+We will use (tooltipcontrack.html)
+
+In the above example, the content of tooltip of first box is set using content option. You can also notice the tooltip follows the mouse. The tooltip for second input box is disabled.
+
+
+Use of Position
+The following example shows the usage of option position in the tooltip function of JqueryUI.
+We will use (tooltipposition.html)
+
+In the above example the tooltip position is set on top of the input box.
+
+
+$ (selector, context).tooltip ("action", [params]) Method
+
+The tooltip (action, params) method can perform an action on the tooltip elements, such as disabling the tooltip. The action is specified as a string in the first argument and optionally, one or more params can be provided based on the given action.
+
+Basically, here actions are nothing but they are jQuery methods which we can use in the form of string.
+Syntax
+$(selector, context).tooltip ("action", [params]);
+The following table lists the actions for this method −
+
+Sr.No.	Action & Description
+1	close()
+This action closes the tooltip. This method does not accept any arguments.
+
+2	destroy()
+This action removes the tooltip functionality completely. This will return the element back to its pre-init state. This method does not accept any arguments.
+
+3	disable()
+This action deactivates the tooltip. This method does not accept any arguments.
+
+4	enable()
+This action activates the tooltip. This method does not accept any arguments.
+
+5	open()
+This action programmatically opens the tooltip. This method does not accept any arguments.
+
+6	option( optionName )
+This action gets the value associated with optionName for the tooltip. This method does not accept any arguments.
+
+7	option()
+This action gets an object containing key/value pairs representing the current tooltip options hash. This method does not accept any arguments.
+
+8	option( optionName, value )
+This action sets the value of the tooltip option associated with the specified optionName.
+
+9	option( options )
+This action sets one or more options for tooltip.
+
+10	widget()
+This action returns a jQuery object containing the original element. This method does not accept any arguments.
+
+Examples
+Now let us see an example using the actions from the above table. The following example demonstrates the use of actions disable and enable.
+We will use (tooltipactiondisable.html)
+
+In the above example, click on myBtn button and a tooltip pops up.
+
+
+Event Management on Tooltip elements
+In addition to the tooltip (options) method which we saw in the previous sections, JqueryUI provides event methods as which gets triggered for a particular event. These event methods are listed below −
+
+Sr.No.	Event Method & Description
+1	create(event, ui)
+Triggered when the tooltip is created. Where event is of type Event, and ui is of type Object.
+
+2	close(event, ui)
+Triggered when the tooltip is closed. Usually triggers on focusout or mouseleave. Where event is of type Event, and ui is of type Object.
+
+3	open(event, ui)
+Triggered when the tooltip is displayed or shown. Usually triggered on focusin or mouseover. Where event is of type Event, and ui is of type Object.
+
+Examples
+The following example demonstrates event method usage during tooltip functionality. This example demonstrates use of open and close events.
+We will use (tooltipevtopenclose.html)
+
+In the above example the tooltip for Hover over me! disappear immediately whereas the tooltip for Hover over me too! fades out after duration of 1000ms.
+
+
+
+
+
+////////////JqueryUI Effects
+The jQuery UI effects category takes the basic effects provided by the jQuery library to the next level. they add a bunch of effects  that are not present in jQuery and they extend some of the basic ones as well. E.G  They have some of the effects that deals with adding and removing CSS classes & they extend the existing hide, show & toggle effects that the jQery library provides and they add ways of doing color animations which is not present in the basic jQuery libra.
+
+
+
+JqueryUI - ADD CLASS
+
+This chapter will discuss the addClass() method, which is one of the methods used to manage jQueryUI visual effects. addClass() method allow animating the changes to the CSS properties.
+
+addClass() method add specified classes to the matched elements while animating all style changes.
+
+Syntax
+Added In Version 1.0 of jQueryUI
+The addClass() method has its basic syntax as follows −
+
+.addClass( className [, duration ] [, easing ] [, complete ] )
+Sr.No.	Parameter & Description
+1	
+className
+
+This is a String containing one or more CSS classes (separated by spaces).
+
+2	
+duration
+
+This is of type Number or String, and indicates the number of milliseconds of the effect. A value of 0 takes the element directly in the new style, without progress. Its default value is 400.
+
+3	
+easing
+
+This is of type String and indicates the way to progress in the effect. Its default value is swing. Possible values are here.
+
+4	
+complete
+
+This is a callback method called for each element when the effect is complete for this element.
+
+Added In Version 1.9 of jQueryUI
+With version 1.9, this method now supports a children option, which will also animate descendant elements.
+
+.addClass( className [, options ] )
+Sr.No.	Parameter & Description
+1	
+className
+
+This is a String containing one or more CSS classes (separated by spaces).
+
+2	
+options
+
+This represents all animation settings. All properties are optional. Possible values are −
+
+duration − This is of type Number or String, and indicates the number of milliseconds of the effect. A value of 0 takes the element directly in the new style, without progress. Its default value is 400.
+
+easing − This is of type String and indicates the way to progress in the effect. Its default value is swing. Possible values are here.
+
+complete − This is a callback method called for each element when the effect is complete for this element.
+
+children − This is of type Boolean and represents whether the animation should additionally be applied to all descendants of the matched elements. Its default value is false.
+
+queue − This is of type Boolean or String and represents whether to place the animation in the effects queue. Its default value is true.
+
+Examples
+The following example demonstrates the use of addClass() methods.
+
+Passing single class
+We will use (addclass.html)
+
+
+Click on the Add Class and Remove Class buttons to see the effect of classes on the box.
+
+
+Passing multiple classes
+This example shows how to pass multiple classes to the addClass method.
+We will use (addclassmultiple.html)
+
+
+
+
+JqueryUI - COLOR ANIMATION
+
+jQueryUI extends some core jQuery methods so that you can animate different transitions for an element. One of them being animate method. jQueryUI extends the jQuery animate method, to add support for animating colors. You can animate one of several CSS properties that define an element’s colors. Following are the CSS properties that the animate method supports.
+
+backgroundColor − Sets the background color of the element.
+
+borderTopColor − Sets the color for top side of the element border.
+
+borderBottomColor − Sets the color for bottom side of the element border.
+
+borderLeftColor − Sets the color for left side of the element border.
+
+borderRightColor − Sets the color for right side of the element border.
+
+color − Sets the text color of the element.
+
+outlineColor − Sets the color for the outline; used to emphasize the element.
+
+Syntax
+The following is the syntax of the jQueryUI animate method −
+
+$( "#selector" ).animate(
+   { backgroundColor: "black",
+      color: "white"
+   }
+);
+You can set any number of properties in this method separated by , (comma).
+
+Example
+The following example demonstrates the use of addClass() methods.
+We will use (coloranimationaddclass.html)
+
+
+Click on the button and see how the animation changes of the box.
+
+
+
+JqueryUI - EFFECT
+
+This chapter will discuss the effect() method, which is one of the methods used to manage jQueryUI visual effects. effect() method applies an animation effect to the elements without having to show or hide it.
+
+Syntax
+The effect() method has the following syntax −
+
+.effect( effect [, options ] [, duration ] [, complete ] )
+Sr.No.	Parameter & Description
+1	
+effect
+
+This is a String indicating which effect to use for the transition.
+
+2	
+options
+
+This is of type Object and indicates effect-specific settings and easing. Additionally, each effect has its own set of options that can be specified common across multiple effects described in the table jQueryUI Effects.
+
+3	
+duration
+
+This is of type Number or String, and indicates the number of milliseconds of the effect. Its default value is 400.
+
+4	
+complete
+
+This is a callback method called for each element when the effect is complete for this element.
+
+jQueryUI Effects
+The following table describes the various effects that can be used with the effects() method −
+
+Sr.No.	Effect & Description
+1	
+blind
+
+Shows or hides the element in the manner of a window blind: by moving the bottom edge down or up, or the right edge to the right or left, depending upon the specified direction and mode.
+
+2	
+bounce
+
+Causes the element to appear to bounce in the vertical or horizontal direction, optionally showing or hiding the element.
+
+3	
+clip
+
+Shows or hides the element by moving opposite borders of the element together until they meet in the middle, or vice versa.
+
+4	
+drop
+
+Shows or hides the element by making it appear to drop onto, or drop off of, the page.
+
+5	
+explode
+
+Shows or hides the element by splitting it into multiple pieces that move in radial directions as if imploding into, or exploding from, the page.
+
+6	
+fade
+
+Shows or hides the element by adjusting its opacity. This is the same as the core fade effects, but without options.
+
+7	
+fold
+
+Shows or hides the element by adjusting opposite borders in or out, and then doing the same for the other set of borders.
+
+8	
+highlight
+
+Calls attention to the element by momentarily changing its background color while showing or hiding the element.
+
+9	
+puff
+
+Expands or contracts the element in place while adjusting its opacity.
+
+10	
+pulsate
+
+Adjusts the opacity of the element on and off before ensuring that the element is shown or hidden as specified.
+
+11	
+scale
+
+Expands or contracts the element by a specified percentage.
+
+12	
+shake
+
+Shakes the element back and forth, either vertically or horizontally.
+
+13	
+size
+
+Resizes the element to a specified width and height. Similar to scale except for how the target size is specified.
+
+14	
+slide
+
+Moves the element such that it appears to slide onto or off of the page.
+
+15	
+transfer
+
+Animates a transient outline element that makes the element appear to transfer to another element. The appearance of the outline element must be defined via CSS rules for the ui-effects-transfer class, or the class specified as an option.
+
+Examples
+The following examples demonstrates the use of effect() method with different effect listed in the above table.
+
+Effect - Shake
+We will use (effectshake.html)
+
+
+Effect - explode
+We will use (effectexplode.html)
+
+
+
+
+JqueryUI - HIDE
+This chapter will discuss the hide() method, which is one of the methods used to manage jQueryUI visual effects. effect() method applies an animation effect to hide elements.
+
+Syntax
+The hide() method has the following syntax −
+
+.hide( effect [, options ] [, duration ] [, complete ] )
+Sr.No.	Parameter & Description
+1	
+effect
+
+This is a String indicating which effect to use for the transition.
+
+2	
+options
+
+This is of type Object and indicates effect-specific settings and easing. Additionally, each effect has its own set of options that can be specified common across multiple effects described in the table jQueryUI Effects.
+
+3	
+duration
+
+This is of type Number or String, and indicates the number of milliseconds of the effect. Its default value is 400.
+
+4	
+complete
+
+This is a callback method called for each element when the effect is complete for this element.
+
+jQueryUI Effects
+The following table describes the various effects that can be used with the hide() method −
+
+Sr.No.	Effect & Description
+1	
+blind
+
+Shows or hides the element in the manner of a window blind: by moving the bottom edge down or up, or the right edge to the right or left, depending upon the specified direction and mode.
+
+2	
+bounce
+
+Causes the element to appear to bounce in the vertical or horizontal direction, optionally showing or hiding the element.
+
+3	
+clip
+
+Shows or hides the element by moving opposite borders of the element together until they meet in the middle, or vice versa.
+
+4	
+drop
+
+Shows or hides the element by making it appear to drop onto, or drop off of, the page.
+
+5	
+explode
+
+Shows or hides the element by splitting it into multiple pieces that move in radial directions as if imploding into, or exploding from, the page.
+
+6	
+fade
+
+Shows or hides the element by adjusting its opacity. This is the same as the core fade effects, but without options.
+
+7	
+fold
+
+Shows or hides the element by adjusting opposite borders in or out, and then doing the same for the other set of borders.
+
+8	
+highlight
+
+Calls attention to the element by momentarily changing its background color while showing or hiding the element.
+
+9	
+puff
+
+Expands or contracts the element in place while adjusting its opacity.
+
+10	
+pulsate
+
+Adjusts the opacity of the element on and off before ensuring that the element is shown or hidden as specified.
+
+11	
+scale
+
+Expands or contracts the element by a specified percentage.
+
+12	
+shake
+
+Shakes the element back and forth, either vertically or horizontally.
+
+14	
+size
+
+Resizes the element to a specified width and height. Similar to scale except for how the target size is specified.
+
+15	
+slide
+
+Moves the element such that it appears to slide onto or off of the page.
+
+16	
+transfer
+
+Animates a transient outline element that makes the element appear to transfer to another element. The appearance of the outline element must be defined via CSS rules for the ui-effects-transfer class, or the class specified as an option.
+
+Examples
+The following examples demonstrates the use of hide() method with different effect listed in the above table.
+
+Effect - Blind
+The following example shows the use of hide() method with blind effect. Click on the button Blind Effect Hide to see the blind effect before the element hides.
+
+We will use (hideblind.html)
+
+
+Effect - Shake
+The following example shows the use of shake() method with blind effect. Click on the button Shake Effect Hide to see the shake effect before the element hides.
+We will use (hideshake.html)
+
+
+
+JqueryUI - REMOVE CLASS
+
+This chapter will discuss the removeClass() method, wh ich is one of the methods used to manage jQueryUI visual effects. removeClass() method removes the applied classes from the elements.
+
+removeClass() method removes the specified classes to the matched elements while animating all style changes.
+
+Syntax
+Added In Version 1.0 of jQueryUI
+The removeClass() method has its basic syntax as follows −
+
+.removeClass( className [, duration ] [, easing ] [, complete ] )
+Sr.No.	Parameter & Description
+1	
+className
+
+This is a String containing one or more CSS classes (separated by spaces) to be removed.
+
+2	
+duration
+
+This is of type Number or String, and indicates the number of milliseconds of the effect. A value of 0 takes the element directly in the new style, without progress. Its default value is 400.
+
+3	
+easing
+
+This is of type String and indicates the way to progress in the effect. Its default value is swing. Possible values are here.
+
+4	
+complete
+
+This is a callback method called for each element when the effect is complete for this element.
+
+Added In Version 1.9 of jQueryUI
+With version 1.9, this method now supports a children option, which will also animate descendant elements.
+
+.removeClass( className [, options ] )
+Sr.No.	Parameter & Description
+1	
+className
+
+This is a String containing one or more CSS classes (separated by spaces).
+
+2	
+options
+
+This represents all animation settings. All properties are optional. Possible values are −
+
+duration − This is of type Number or String, and indicates the number of milliseconds of the effect. A value of 0 takes the element directly in the new style, without progress. Its default value is 400.
+
+easing − This is of type String and indicates the way to progress in the effect. Its default value is swing. Possible values are here.
+
+complete − This is a callback method called for each element when the effect is complete for this element.
+
+children − This is of type Boolean and represents whether the animation should additionally be applied to all descendants of the matched elements. Its default value is false.
+
+queue − This is of type Boolean or String and represents whether to place the animation in the effects queue. Its default value is true.
+
+Examples
+The following example demonstrates the use of removeClass() methods.
+
+Passing single class
+We will use (removeclasspassing.html)
+
+
+Click on the Add Class and Remove Class buttons to see the effect of classes on the box.
+
+
+JqueryUI - SHOW
+
+This chapter will discuss the show() method, which is one of the methods used to manage jQueryUI visual effects. show() method displays an item using the indicated effect.
+
+show() method toggles the visibility of the wrapped elements using the specified effect.
+
+Syntax
+The show() method has the following syntax −
+
+.show( effect [, options ] [, duration ] [, complete ] )
+Sr.No.	Parameter & Description
+1	
+effect
+
+This is a String indicating which effect to use for the transition.This is a String and represents the effect to use when adjusting the element visibility. The effects are listed in the table below.
+
+2	
+options
+
+This is of type Object and indicates effect-specific settings and easing. Additionally, each effect has its own set of options that can be specified common across multiple effects described in the table jQueryUI Effects.
+
+3	
+duration
+
+This is of type Number or String and determines how long the animation will run. Its default value is 400.
+
+4	
+complete
+
+This is a callback method called for each element when the effect is complete for this element.
+
+jQueryUI Effects
+The following table describes the various effects that can be used with the effects() method −
+
+Sr.No.	Effect & Description
+1	
+blind
+
+Shows or hides the element in the manner of a window blind: by moving the bottom edge down or up, or the right edge to the right or left, depending upon the specified direction and mode.
+
+2	
+bounce
+
+Causes the element to appear to bounce in the vertical or horizontal direction, optionally showing or hiding the element.
+
+3	
+clip
+
+Shows or hides the element by moving opposite borders of the element together until they meet in the middle, or vice versa.
+
+4	
+drop
+
+Shows or hides the element by making it appear to drop onto, or drop off of, the page.
+
+5	
+explode
+
+Shows or hides the element by splitting it into multiple pieces that move in radial directions as if imploding into, or exploding from, the page.
+
+6	
+fade
+
+Shows or hides the element by adjusting its opacity. This is the same as the core fade effects, but without options.
+
+7	
+fold
+
+Shows or hides the element by adjusting opposite borders in or out, and then doing the same for the other set of borders.
+
+8	
+highlight
+
+Calls attention to the element by momentarily changing its background color while showing or hiding the element.
+
+9	
+puff
+
+Expands or contracts the element in place while adjusting its opacity.
+
+10	
+pulsate
+
+Adjusts the opacity of the element on and off before ensuring that the element is shown or hidden as specified.
+
+11	
+scale
+
+Expands or contracts the element by a specified percentage.
+
+12	
+shake
+
+Shakes the element back and forth, either vertically or horizontally.
+
+13	
+size
+
+Resizes the element to a specified width and height. Similar to scale except for how the target size is specified.
+
+14	
+slide
+
+Moves the element such that it appears to slide onto or off of the page.
+
+15	
+transfer
+
+Animates a transient outline element that makes the element appear to transfer to another element. The appearance of the outline element must be defined via CSS rules for the ui-effects-transfer class, or the class specified as an option.
+
+Examples
+The following example demonstrates the use of show() method.
+
+Show with Shake Effect
+The following examples demonstrates show() method with shake effect.
+We will use (showshakeeffect.html)
+
+
+Click on the Add Class and Remove Class buttons to see the effect of classes on the box
+
+
+Show with Blind Effect
+The following example demonstrates the use of show() method with blind effect.
+We will use (showblindeffect.html)
+
+
+
+JqueryUI - SWITCH CLASS
+
+This chapter will discuss the switchClass() method, which is a useful new class for manipulation. switchClass() method move from one CSS one CSS class to another, animating the transition from one state to the other.
+
+Syntax
+Added In Version 1.0 of jQueryUI
+The switchClass() method has its basic syntax as follows −
+
+.switchClass( removeClassName, addClassName [, duration ] [, easing ] [, complete ] )
+Sr.No.	Parameter & Description
+1	
+removeClassName
+
+This is a String and represents the CSS class name, or space-delimited list of class names, to be removed.
+
+2	
+addClassName
+
+This is of type String and represents one or more class names (space separated) to be added to the class attribute of each matched element.
+
+3	
+duration
+
+This is of type Number or String and optionally provides one of slow, normal, fast, or the duration of the effect in milliseconds. If omitted, the animate() method determines the default. Its default value is 400.
+
+4	
+easing
+
+The name of the easing function to be passed to the animate() method.
+
+5	
+complete
+
+This is a callback method called for each element when the effect is complete for this element.
+
+Added In Version 1.9 of jQueryUI
+With version 1.9, this method now supports a children option, which will also animate descendant elements.
+
+.switchClass( removeClassName, addClassName [, options ] )
+Sr.No.	Parameter & Description
+1	
+removeClassName
+
+This is a String and represents the CSS class name, or space-delimited list of class names, to be removed.
+
+2	
+addClassName
+
+This is of type String and represents one or more class names (space separated) to be added to the class attribute of each matched element.
+
+3	
+options
+
+This represents all animation settings. All properties are optional. Possible values are −
+
+duration − A string or number determining how long the animation will run.. Its default value is 400.
+
+easing − A string indicating which easing function to use for the transition. Its default value is swing. Possible values are here.
+
+complete − This is a callback method called for each element when the effect is complete for this element.
+
+children − This is a Boolean and represents whether the animation should additionally be applied to all descendants of the matched elements.
+
+queue − This is of type String/Boolean indicating whether to place the animation in the effects queue..
+
+Examples
+The following example demonstrates the use of switchClass() method.
+
+Click on the Switch Class button to see the effect of classes on the box.
+We will use (switchclasseffect.html)
+
+
+
+
+JqueryUI - TOGGLE
+
+This chapter will discuss the toggle() method of jQueryUI visual effects. toggle() method toggles the show () or hide () methods depending on whether the element is hidden or not.
+
+Syntax
+The toggle() method has the following syntax −
+
+.toggle( effect [, options ] [, duration ] [, complete ] )
+Sr.No.	Parameter & Description
+1	
+effect
+
+This is a String indicating which effect to use for the transition.This is a String and represents the effect to use when adjusting the element visibility. The effects are listed in the table below.
+
+2	
+options
+
+This is of type Object and indicates effect-specific settings and easing. Additionally, each effect has its own set of options that can be specified common across multiple effects described in the table jQueryUI Effects.
+
+3	
+duration
+
+This is of type Number or String and determines how long the animation will run. Its default value is 400.
+
+4	
+complete
+
+This is a callback method called for each element when the effect is complete for this element.
+
+jQueryUI Effects
+The following table describes the various effects that can be used with the effects() method −
+
+Sr.No.	Effect & Description
+1	
+blind
+
+Shows or hides the element in the manner of a window blind: by moving the bottom edge down or up, or the right edge to the right or left, depending upon the specified direction and mode.
+
+2	
+bounce
+
+Causes the element to appear to bounce in the vertical or horizontal direction, optionally showing or hiding the element.
+
+3	
+clip
+
+Shows or hides the element by moving opposite borders of the element together until they meet in the middle, or vice versa.
+
+4	
+drop
+
+Shows or hides the element by making it appear to drop onto, or drop off of, the page.
+
+5	
+explode
+
+Shows or hides the element by splitting it into multiple pieces that move in radial directions as if imploding into, or exploding from, the page.
+
+6	
+fade
+
+Shows or hides the element by adjusting its opacity. This is the same as the core fade effects, but without options.
+
+7	
+fold
+
+Shows or hides the element by adjusting opposite borders in or out, and then doing the same for the other set of borders.
+
+8	
+highlight
+
+Calls attention to the element by momentarily changing its background color while showing or hiding the element.
+
+9	
+puff
+
+Expands or contracts the element in place while adjusting its opacity.
+
+10	
+pulsate
+
+Adjusts the opacity of the element on and off before ensuring that the element is shown or hidden as specified.
+
+11	
+scale
+
+Expands or contracts the element by a specified percentage.
+
+12	
+shake
+
+Shakes the element back and forth, either vertically or horizontally.
+
+13	
+size
+
+Resizes the element to a specified width and height. Similar to scale except for how the target size is specified.
+
+14	
+slide
+
+Moves the element such that it appears to slide onto or off of the page.
+
+15	
+transfer
+
+Animates a transient outline element that makes the element appear to transfer to another element. The appearance of the outline element must be defined via CSS rules for the ui-effects-transfer class, or the class specified as an option.
+
+Example
+The following example demonstrates the use of toggle() method with different effect listed in the above table.
+We will use (toggle.html)
+
+
+Click on the Toggle button to check how the classes are shown and hidden.
+
+
+
+
+JqueryUI - TOGGLE CLASS
+
+This chapter will discuss the toggleClass() method, which is a useful new class for manipulation. toggleClass() method adds or removes one or more classes from each element in the set of matched elements.
+
+Syntax
+Added in Version 1.0 of jQueryUI
+The toggleClass() method has its basic syntax as follows −
+
+.toggleClass( className [, switch ] [, duration ] [, easing ] [, complete ] )
+Sr.No.	Parameter & Description
+1	
+className
+
+This is a String and represents the CSS class name, or space-delimited list of class names, to be added, removed, or toggled.
+
+2	
+switch
+
+This is of type Boolean and if specified, forces the toggleClass() method to add the class if true, or to remove the class if false.
+
+3	
+duration
+
+This is of type Number or String and optionally provides one of slow, normal, fast, or the duration of the effect in milliseconds. If omitted, the animate() method determines the default. Its default value is 400.
+
+4	
+easing
+
+The name of the easing function to be passed to the animate() method.
+
+5	
+complete
+
+This is a callback method called for each element when the effect is complete for this element.
+
+Added In Version 1.9 of jQueryUI
+With version 1.9, this method now supports a children option, which will also animate descendant elements.
+
+.toggleClass( className [, switch ] [, options ] )
+Sr.No.	Parameter & Description
+1	
+className
+
+This is a String and represents the CSS class name, or space-delimited list of class names, to be added, removed, or toggled.
+
+2	
+switch
+
+This is of type Boolean and if specified, forces the toggleClass() method to add the class if true, or to remove the class if false.
+
+3	
+options
+
+This represents all animation settings. All properties are optional. Possible values are −
+
+duration − A string or number determining how long the animation will run.. Its default value is 400.
+
+easing − A string indicating which easing function to use for the transition. Its default value is swing. Possible values are here.
+
+complete − This is a callback method called for each element when the effect is complete for this element.
+
+children − This is a Boolean and represents whether the animation should additionally be applied to all descendants of the matched elements.
+
+queue − This is of type String/Boolean indicating whether to place the animation in the effects queue.
+
+Examples
+The following example demonstrates the use of toggleClass() method.
+We will use (toggleclassmethod.html)
+
+
+Click on the Toggle button to see how the CSS classes are changeed for the text.
+
+
+
+
+///////////  JqueryUI UTILITIES
+
+JqueryUI - POSITION
+
+In this chapter we shall see one of the utility methods of jqueryUi, the position() method. The position() method allows you to position an element with respect to another element or mouse event.
+
+jQuery UI extends the .position() method from jQuery core in a way that lets you describe how you want to position an element the same way you would naturally describe it to another person. Instead of working with numbers and math, you work with meaningful words (such as left and right) and relationships.
+
+Syntax
+The following is the syntax of the position() method −
+
+.position( options )
+Where options is of type Object and provides the information that specifies how the elements of the wrapped set are to be positioned. Following table lists the different options that can be used with this method −
+
+Sr.No.	Option & Description
+1	my
+This option specifies the location of the wrapped elements (the ones being re-positioned) to align with the target element or location. By default its value is center.
+
+2	at
+This option is of type String and specifies the location of the target element against which to align the re-positioned elements. Takes the same values as the my option. By default its value is center.
+
+3	of
+This is of type Selector or Element or jQuery or Event. It identifies the target element against which the wrapped elements are to be re-positioned, or an Event instance containing mouse coordinates to use as the target location. By default its value is null.
+
+4	collision
+This option is of type String and specifies the rules to be applied when the positioned element extends beyond the window in any direction. By default its value is flip.
+
+5	using
+This option is a function that replaces the internal function that changes the element position. Called for each wrapped element with a single argument that consists of an object hash with the left and top properties set to the computed target position, and the element set as the function context. By default its value is null.
+
+6	within
+This option is a Selector or Element or jQuery element, and allows you to specify which element to use as the bounding box for collision detection. This can come in handy if you need to contain the positioned element within a specific section of your page. By default its value is window.
+
+Example
+The following example demontstrates the use of position method.
+We will use (positionmethod.html)
+
+
+In this example we see that −
+
+Box 1 is aligned to center (horizontally and vertically) of the div element.
+
+Box 2is aligned to left top (horizontally and vertically) of the div element.
+
+Box 3is displayed in the top right corner of the window, but leave some padding so that the message stands out more. This is done using the horizontal and vertical values of my or at.
+
+For Box 4, the of value is set as an event object. This is an event associated with a pointer and moves with the mouse event.
+
+
+
+
+JqueryUI - WIDGET FACTORY
+
+Earlier, the only way to write custom controls in jQuery was to extend the $.fn namespace. This works well for simple widgets. Suppose you build more stateful widgets, it quickly becomes cumbersome. To aid in the process of building widgets, Widget Factory was introduced in the jQuery UI, which removes most of the boilerplate that is typically associated with managing a widget.
+
+The jQueryUI Widget Factory is simply a function ($.widget) that takes a string name and an object as arguments and creates a jQuery plugin and a "Class" to encapsulate its functionality.
+
+Syntax
+The following is the syntax of jQueryUI Widget Factory method −
+
+jQuery.widget( name [, base ], prototype )
+name − It is a string containing a namespace and the widget name (separated by a dot) of the widget to create.
+
+base − The base widget to inherit from. This must be a constructor that can be instantiated with the `new` keyword. Defaults to jQuery.Widget.
+
+prototype − The object to use as a prototype for the widget to inherit from. For instance, jQuery UI has a "mouse" plugin on which the rest of the interaction plugins are based. In order to achieve this, draggable, droppable, etc. all inherit from the mouse plugin like so: jQuery.widget( "ui.draggable", $.ui.mouse, {...} ); If you do not supply this argument, the widget will inherit directly from the "base widget," jQuery.Widget (note the difference between lowercase "w" jQuery.widget and uppercase "W" jQuery.Widget).
+
+Base Widget
+Base widget is the widget used by the widget factory.
+
+Options
+The following table lists the different options that can be used with the base widget −
+
+Sr.No.	Option & Description
+1	disabledhide
+This option disables the widget if set to true. By default its value is false.
+
+2	hide
+This option determines how to animate the hiding of the element. By default its value is null.
+
+3	show
+This option determines how to animate the showing of the element. By default its value is null.
+
+Methods
+The following table lists the different methods that can be used with the base widget −
+
+Sr.No.	Action & Description
+1	_create()
+This method is the widget's constructor. There are no parameters, but this.element and this.options are already set.
+
+2	_delay( fn [, delay ] )
+This method invokes the provided function after a specified delay. Returns the timeout ID for use with clearTimeout().
+
+3	_destroy()
+The public destroy() method cleans up all common data, events, etc. and then delegates out to this _destroy() method for custom, widget-specific, cleanup.
+
+4	_focusable( element )
+This method sets up element to apply the ui-state-focus class on focus. The event handlers are automatically cleaned up on destroy.
+
+5	_getCreateEventData()
+All widgets trigger the create event. By default, no data is provided in the event, but this method can return an object which will be passed as the create event's data.
+
+6	_getCreateOptions()
+This method allows the widget to define a custom method for defining options during instantiation. The user-provided options override the options returned by this method, which override the default options.
+
+7	_hide( element, option [, callback ] )
+This method hides an element immediately, using built-in animation methods, or using custom effects. See the hide option for possible option values.
+
+8	_hoverable( element )
+This method Sets up element to apply the ui-state-hover class on hover. The event handlers are automatically cleaned up on destroy.
+
+9	_init()
+Any time the plugin is called with no arguments or with only an option hash, the widget is initialized; this includes when the widget is created.
+
+10	_off( element, eventName )
+This method unbinds event handlers from the specified element(s).
+
+11	_on( [suppressDisabledCheck ] [, element ], handlers )
+Binds event handlers to the specified element(s). Delegation is supported via selectors inside the event names, e.g., "click .foo".
+
+12	_setOption( key, value )
+This method is called from the _setOptions() method for each individual option. Widget state should be updated based on changes.
+
+13	_setOptions( options )
+This method is called whenever the option() method is called, regardless of the form in which the option() method was called.
+
+14	_show( element, option [, callback ] )
+Shows an element immediately, using built-in animation methods, or using custom effects. See the show option for possible option values.
+
+15	_super( [arg ] [, ... ] )
+This method invokes the method of the same name from the parent widget, with any specified arguments. Essentially .call().
+
+16	_superApply( arguments )
+Invokes the method of the same name from the parent widget, with the array of arguments.
+
+17	_trigger( type [, event ] [, data ] )
+This method triggers an event and its associated callback. The option with the name equal to type is invoked as the callback.
+
+18	destroy()
+This method removes the widget functionality completely. This will return the element back to its pre-init state.
+
+19	disable()
+This method disables the widget.
+
+20	enable()
+This method enables the widget.
+
+21	option( optionName )
+This method gets the value currently associated with the specified optionName.
+
+22	option()
+This method gets an object containing key/value pairs representing the current widget options hash.
+
+23	option( optionName, value )
+This method sets the value of the widget option associated with the specified optionName.
+
+24	option( options )
+This method sets one or more options for the widget.
+
+25	widget()
+This method returns a jQuery object containing the original element or other relevant generated element.
+
+Events
+Sr.No.	Event Method & Description
+1	create( event, ui )
+This event is triggered when a widget is created.
+
+jQueryUI widget factory Lifecycle
+The jQueryUI widget factory, provides an object-oriented way to manage the lifecycle of a widget. These lifecycle activities include −
+
+Creating and destroying a widget: For example,
+
+$( "#elem" ).progressbar();
+Changing widget options: For example
+
+$( "#elem" ).progressbar({ value: 20 });
+Making "super" calls in subclassed widgets: For example
+
+$( "#elem" ).progressbar( "value" );
+or 
+$( "#elem" ).progressbar( "value", 40 );
+Event notifications: For example
+
+$( "#elem" ).bind( "progressbarchange", function() {
+   alert( "The value has changed!" );
+});
+Example
+Now let us create a custom widget in the following example. We will create a button widget. We will see how to create options, methods and events in a widget in the following examples −
+
+Creating Custom Widget
+Let us first create a simple custom widget.
+We will use (widgetfactorycustom.html)
+
+Adding Options To Custom Widget
+In the previous example, we used the _create function to create a custom control. But users generally want to customize the control by setting and modifying options. We can define an options object which stores the default values for all of the options you define. _setOption function is used for this purpose. It is called for each individual option that the user sets. Here we are setting width and background-color of the button.
+We will use (widgetfactoryaddingcustom.html)
+
+
+
+Adding Methods to Custom Widget
+In the following example we will add methods that the user can make use of and these are very easy to build into the framework. We will write a Move method, that shifts the button a specified horizontal distance. To make this work, we also need to set the position and left properties in the _create function −
+
+this._button.css("position", "absolute");   
+this._button.css("left", "100px");  
+Following this, the user can now call your method in the usual jQuery UI way −
+
+this._button.css("position", "absolute");   
+this._button.css("left", "100px");  
+$("button3").myButton("move", 200);
+
+We will use (widgetfactoryaddingmethod.html)
+
+
+
+Adding Events To Custom Widget
+In this example we will demonstrate how to create an event. To create an event all you have to do is use the _trigger method. The first parameter is the name of the event, the second any standard event object you want to pass and the third any custom event object you want to pass.
+
+Here we are firing an event when if the button moves beyond x=400. All you have to do is to add to the move function −
+
+if(x<400) { this._trigger("outbounds",{}, {position:x}); }
+In this case the event is called outbounds and an empty event object is passed with a custom event object that simply supplies the position as its only property.
+
+The entire move function is −
+
+move: function(dx) {
+   var x = dx + parseInt(this._button.css("left")); 
+   this._button.css("left", x); 
+   if(x<400) { this._trigger("outbounds",{}, {position:x}); }
+}
+
+
+>The user can set the event handling function by simply defining an option of the same name.
+
+
+$("button4").myButton("option", {
+   width: 100, 
+   color: "red",
+   outbounds:function(e,ui) {
+      alert(ui.position);}
+});
+
+>
+
+We will use (widgetfactoryaddingevents.html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

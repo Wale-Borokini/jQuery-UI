@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI show Example</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <!-- CSS -->
+      <style>
+         .toggler { width: 500px; height: 200px; }
+            #button { padding: .5em 1em; text-decoration: none; }
+            #effect { width: 240px; height: 135px; padding: 0.4em; position: relative; }
+            #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+      </style>
+      
+      <script>
+         $(function() {
+            // run the currently selected effect
+            function runEffect() {
+               // run the effect
+               $( "#effect" ).show( "blind", {times: 10,distance: 100}, 1000, callback);
+            };
+            
+            //callback function to bring a hidden box back
+            function callback() {
+               setTimeout(function() {
+                  $( "#effect:visible" ).removeAttr( "style" ).fadeOut();
+               }, 1000 );
+            };
+            
+            // set effect from select menu value
+            $( "#button" ).click(function() {
+               runEffect();
+               return false;
+            });
+            $( "#effect" ).hide();
+         });
+      </script>
+   </head>
+   
+   <body>
+      <div class = "toggler">
+         <div id = "effect" class = "ui-widget-content ui-corner-all">
+            <h3 class = "ui-widget-header ui-corner-all">Show</h3>
+            <p>
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+            </p>
+         </div>
+      </div>
+      <a href = "#" id = "button" class = "ui-state-default ui-corner-all">Run Effect</a>
+   </body>
+</html>

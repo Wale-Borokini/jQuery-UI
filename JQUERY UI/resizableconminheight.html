@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Resizable functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+   
+      <style>
+         .ui-widget-header {
+            background:#b9cd6d;
+            border: 1px solid #b9cd6d;
+            color: #FFFFFF;
+            font-weight: bold;
+         }
+         .ui-widget-content {
+            background: #cedc98;
+            border: 1px solid #DDDDDD;
+            color: #333333;
+         }
+         #container-1 { width: 300px; height: 300px; }
+         #resizable-4 {background-position: top left; 
+            width: 150px; height: 150px; } 
+         #resizable-4, #container { padding: 0.5em; }  
+      </style>
+
+      <script>
+         $(function() {
+            $( "#resizable-4" ).resizable({
+               containment: "#container",
+               minHeight: 70,
+               minWidth: 100
+            });
+         });
+      </script>
+   </head>
+
+   <body>
+      <div id = "container" class = "ui-widget-content">
+         <div id = "resizable-4" class = "ui-state-active">
+            <h3 class = "ui-widget-header">
+               Resize contained to this container
+            </h3>
+         </div>
+      </div> 
+   </body>
+</html>

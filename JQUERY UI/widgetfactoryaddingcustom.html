@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Widget - Default functionality</title>
+      <link rel = "stylesheet" href = "//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+      <script>
+         $(function() {
+            $.widget("iP.myButton", {
+               _create: function() { 
+                  this._button = $("<button>"); 
+                  this._button.text("My first Widget Button");
+                  this._button.width(this.options.width) 
+                  this._button.css("background-color", this.options.color);    
+                  this._button.css("position", "absolute");   
+                  this._button.css("left", "100px");            
+                  $(this.element).append(this._button);
+               },
+               _setOption: function(key, value) { 
+                  switch (key) { 
+                     case "width": 
+                     this._button.width(value); 
+                     break; 
+                     case "color":
+                     this._button.css("background-color",value);
+                     break; 
+                  } 
+               },
+            });
+            $("#button2").myButton();
+            $("#button2").myButton("option", {width:100,color:"#cedc98"});
+         });
+      </script>
+   </head>
+   
+   <body>
+      <div id = "button2"></div>
+   </body>
+</html>
